@@ -1,0 +1,1 @@
+python ./ursina_game.py

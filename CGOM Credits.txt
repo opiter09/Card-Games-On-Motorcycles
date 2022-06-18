@@ -6,5 +6,15 @@ The other racing assets come from OpenGL Racing Game Prototype, a simple
 engine for making racing games. It can be found at
 https://github.com/Mikepicker/opengl-racing.
 
+The assets had to be modified in Blender to all be triangulated. If done
+manually this would not merit much discussion, however I was able to
+automate the process (well, except for the motorcycles, which were a pain to do
+and why I looked into this) using a Blender python script made by mfirmin.
+It can be found at
+https://gist.github.com/mfirmin/0d6ecbe52eeaaa0202f97c3b68d37f6f#file-triangulate-py.
+For Windows users who want to use this script, do note that you will need to replace
+all "/" in the code with "\\"; in general, you need to get rid of 
+"materials = False" at the bottom if your models used materials files like mine.
+
 All the card game stuff was made by me, hence why it is all text and straight
 lines and stuff.

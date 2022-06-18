@@ -1,14 +1,23 @@
-# Created by Kenney (www.kenney.nl) 
+# Blender MTL File: 'None'
+# Material Count: 2
 
-newmtl grey
-Ka 0.000000 0.000000 0.000000 
-Kd 0.945098 0.9490196 0.9647059 
-Ks 0.330000 0.330000 0.330000 
+newmtl grey.009
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.945098 0.949020 0.964706
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
 
 newmtl net
-Ka 0.000000 0.000000 0.000000 
-Kd 1 1 1 
-Ks 0.330000 0.330000 0.330000 
-map_Ka Textures/net.png 
-map_Kd Textures/net.png 
-
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\opite\\Downloads\\blender-3.1.2-windows-x64\\input\\Textures\\net.png

@@ -16,5 +16,6 @@ For Windows users who want to use this script, do note that you will need to rep
 all "/" in the code with "\\"; in general, you need to get rid of 
 "materials = False" at the bottom if your models used materials files like mine.
 
-All the card game stuff was made by me, hence why it is all text and straight
-lines and stuff.
+The card game text is just text I added in with the engine, but the card
+rectangles, zone rectangles, etc. come from
+https://cafedraw.itch.io/fantasy-card-assets

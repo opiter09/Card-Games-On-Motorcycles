@@ -17,5 +17,8 @@ all "/" in the code with "\\"; in general, you need to get rid of
 "materials = False" at the bottom if your models used materials files like mine.
 
 The card game text is just text I added in with the engine, but the card
-rectangles, zone rectangles, etc. come from
-https://cafedraw.itch.io/fantasy-card-assets
+rectangles, zone rectangles, etc. come from the Fantasy Card Assets by cafeDraw.
+The asset pack can be found at https://cafedraw.itch.io/fantasy-card-assets
+
+The board the cards are played on comes from the 2D Chess Pack by Screaming Brain
+Studios. It can be found at https://screamingbrainstudios.itch.io/isometric-chess

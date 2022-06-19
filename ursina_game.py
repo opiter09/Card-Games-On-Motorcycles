@@ -5,6 +5,7 @@ sun = DirectionalLight()
 sun.look_at(Vec3(1, -1, 1))
 Sky()
 base.disableMouse()
+base.camNode.setActive(False)
 
 import racing
 import cards

@@ -18,3 +18,9 @@ def cardsUpdate():
     
 def cardsInput(key):
     pass
+    
+wp = WindowPanel(
+    title = "",
+    popup = False,
+    enabled = True,
+)

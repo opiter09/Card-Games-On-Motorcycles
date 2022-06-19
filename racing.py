@@ -20,8 +20,6 @@ base.camera2.reparentTo(cycle2)
 base.camera2.lookAt(cycle2)
 base.camera2.setPos(15, 2, 0)
 base.camera2.setHpr(90, 0, 0)
-        
-base.camNode.setActive(False)
 
 def racingInput(key):
     pass

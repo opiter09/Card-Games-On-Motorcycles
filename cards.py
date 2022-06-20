@@ -18,9 +18,15 @@ def cardsUpdate():
     
 def cardsInput(key):
     pass
-    
-wp = WindowPanel(
-    title = "",
-    popup = False,
-    enabled = True,
-)
+
+def createCamera(self, dispRegion):
+    theCamera = base.makeCamera(base.win, displayRegion = dispRegion)
+    theCamera.setPos(0, 0, -10)
+    return theCamera
+
+board = Sprite("cardSprites/board", filtering = False, position = (1000, 0, 0))
+base.camera3 = createCamera(base, (0, 0.5, 0, 0.5))
+base.camera3.reparentTo(board)
+base.camera3.lookAt(board)
+base.camera3.setPos(0, 0, -2)
+base.camera3.node().getLens().setNearFar(1.9, 2.1)

@@ -7,4 +7,4 @@ This game is made using Ursina (https://github.com/pokepetter/ursina), a framewo
 sources can be found in the credits file.
 
 This repo is extremely WIP, and honestly it currently exists just to back the code up more so than to garner any feedback or the like. When the game is in a playable 
-state, I plan on releasing it on itch.io.
+state, I plan on releasing it on itch.io (fo free, to be clear).

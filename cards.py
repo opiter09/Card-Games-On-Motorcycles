@@ -1,5 +1,5 @@
 from ursina import *
-
+from setUpSprites import *
 import json
 
 f = open("player1.json")
@@ -18,6 +18,3 @@ def cardsUpdate():
     
 def cardsInput(key):
     pass
-
-from setUpSprites import *
-setUpSprites()

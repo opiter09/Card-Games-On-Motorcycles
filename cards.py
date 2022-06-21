@@ -2,14 +2,14 @@ from ursina import *
 from setUpSprites import *
 import json
 
-f = open("player1.json")
+f = open("player1.txt")
 player1Deck = json.load(f)
 #print(player1Deck[str(1)])
 f.close()
 
-f = open("player2.json")
+f = open("player2.txt")
 player2Deck = json.load(f)
-#print(player1Deck[str(1)])
+#print(player2Deck[str(1)])
 f.close()
 
 p1Life = 15

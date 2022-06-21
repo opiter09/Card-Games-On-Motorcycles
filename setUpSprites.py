@@ -34,7 +34,7 @@ p1card3 = Sprite("cardSprites/cardFront", filtering = False, position = (995.2, 
 p1card4 = Sprite("cardSprites/cardFront", filtering = False, position = (994.3, -1.87, 0))
 p1card5 = Sprite("cardSprites/cardFront", filtering = False, position = (993.4, -1.87, 0), visible = False)
 p1card6 = Sprite("cardSprites/cardFront", filtering = False, position = (992.5, -1.87, 0), visible = False)
-p1Life = Entity(model = "circle", position = (991.65, -1.87, 0), scale = 0.8, color = color.turquoise)
+p1LifeCircle = Entity(model = "circle", position = (991.65, -1.87, 0), scale = 0.8, color = color.turquoise)
 
 p2card1 = Sprite("cardSprites/cardFront", filtering = False, position = (1003, 1.965, 0))
 p2card2 = Sprite("cardSprites/cardFront", filtering = False, position = (1003.9, 1.965, 0))
@@ -42,7 +42,7 @@ p2card3 = Sprite("cardSprites/cardFront", filtering = False, position = (1004.8,
 p2card4 = Sprite("cardSprites/cardFront", filtering = False, position = (1005.7, 1.965, 0))
 p2card5 = Sprite("cardSprites/cardFront", filtering = False, position = (1006.6, 1.965, 0), visible = False)
 p2card6 = Sprite("cardSprites/cardFront", filtering = False, position = (1007.5, 1.965, 0), visible = False)
-p2Life = Entity(model = "circle", position = (1008.35, 1.965, 0), scale = 0.8, color = color.turquoise)
+p2LifeCircle = Entity(model = "circle", position = (1008.35, 1.965, 0), scale = 0.8, color = color.turquoise)
 
 base.camera3 = base.makeCamera(base.win, displayRegion = (0, 1, 0, 0.5))
 base.camera3.reparentTo(board)

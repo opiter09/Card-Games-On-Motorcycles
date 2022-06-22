@@ -1,8 +1,8 @@
 from ursina import *
 
-cycle = Entity(model = "motorcycle/motor", rotation = (0, 90, 0))
-cycle2 = Entity(model = "motorcycle/motorBlue", position = (10, 0, 0), rotation = (0, 90, 0))
-start = Entity(model = "racing/roadStart", position = (0, -2.25, 0), scale = 10)
+cycle = Entity(model = "meshes/motorcycle/motor", rotation = (0, 90, 0))
+cycle2 = Entity(model = "meshes/motorcycle/motorBlue", position = (10, 0, 0), rotation = (0, 90, 0))
+start = Entity(model = "meshes/racing/roadStart", position = (0, -2.25, 0), scale = 10)
 
 def createCamera(self, dispRegion):
     theCamera = base.makeCamera(base.win, displayRegion = dispRegion)

@@ -7,8 +7,8 @@ Sky()
 base.disableMouse()
 base.camNode.setActive(False)
 
-import racing
-import cards
+import racingCode.racing as racing
+import cardCode.cards as cards
 
 def update():   # update gets automatically called.
     racing.racingUpdate()

@@ -84,3 +84,6 @@ base.camera3.node().getLens().setNearFar(1.9, 2.1)
 base.camera3.node().getLens().setAspectRatio(16.0/5.0)
 
 check = 1
+
+def updateSprites():
+    pass

@@ -1,3 +1,7 @@
+The code was written in the text editor NotepadPlusPlus, which can be found at
+https://notepad-plus-plus.org/. I used a plugin for it called NppExec in order to
+easily test the code. That plugin can be found at https://github.com/d0vgan/nppexec.
+
 The motorcycle with the red part was made by panosdalk, and can be found at
 https://free3d.com/3d-model/simple-motorcycle-2-981288.html. The blue one is
 just a simple recolor of that done by me.
@@ -18,7 +22,7 @@ all "/" in the code with "\\"; in general, you need to get rid of
 
 The actual card art is poorly done by me, but the card rectangles, zone rectangles,
 etc. come from the Fantasy Card Assets by cafeDraw. This asset pack can be found at
-https://cafedraw.itch.io/fantasy-card-assets
+https://cafedraw.itch.io/fantasy-card-assets.
 
 The board the cards are played on comes from the 2D Chess Pack by Screaming Brain
-Studios. It can be found at https://screamingbrainstudios.itch.io/isometric-chess
+Studios. It can be found at https://screamingbrainstudios.itch.io/isometric-chess.

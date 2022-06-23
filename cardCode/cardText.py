@@ -12,19 +12,12 @@ manaTwo = Text(text = manaStringTwo, origin = (-2, 6), color = color.white)
 mousePos = Text(text = str(mouse.position.getX()) + ", " + str(mouse.position.getY()))
 
 def updateText():
-    global lifeOne
-    global lifeTwo
-    global manaOne
-    global ManaTwo
-    global mousePos
-    
-    lifeOne.text = str(sharedVariables.p1Life)
-    lifeTwo.text = str(sharedVariables.p2Life)
+    globals()["lifeOne"].text = str(sharedVariables.p1Life)
+    globals()["lifeTwo"].text = str(sharedVariables.p2Life)
     manaStringOne = "S " + str(sharedVariables.p1Stone) + "  P " + str(sharedVariables.p1Plant) + "  M " + str(sharedVariables.p1Metal) + "  A " + \
         str(sharedVariables.p1Animal) + "  E " + str(sharedVariables.p1Extraterrestrial)
-    manaOne.text = manaStringOne
+    globals()["manaOne"].text = manaStringOne
     manaStringTwo = "S " + str(sharedVariables.p2Stone) + "  P " + str(sharedVariables.p2Plant) + "  M " + str(sharedVariables.p2Metal) + "  A " + \
         str(sharedVariables.p2Animal) + "  E " + str(sharedVariables.p2Extraterrestrial)
-    manaTwo.text = manaStringTwo
-    mousePos.text = str(mouse.position.getX()) + ", " + str(mouse.position.getY())
-    mousePos.text = str(mouse.position.getX()) + ", " + str(mouse.position.getY())
+    globals()["manaTwo"].text = manaStringTwo
+    globals()["mousePos"].text = str(mouse.position.getX()) + ", " + str(mouse.position.getY())

@@ -18,8 +18,15 @@ random.shuffle(player2Deck)
 player2Hand = player2Deck[0:4]
 player2Deck = player2Deck[4:40]
 
+player1Comrades = player2Comrades = []
+player1Auxiliaries = player2Auxiliaries = []
+player1Discard = player2Discard = []
+
 p1Life = 15
 p2Life = 15
 
 p1Stone = p1Plant = p1Metal = p1Animal = p1Extraterrestrial = 0
 p2Stone = p2Plant = p2Metal = p2Animal = p2Extraterrestrial = 0
+
+def myGlobals():
+    return globals()

@@ -1,12 +1,8 @@
 from ursina import *
+import cardCode.sharedVariables as sharedVariables
 
 board = Sprite("sprites/board", filtering = False, position = (1000, 0, 0), collider = None)
 
-check = None
-def callOEA():
-    global check
-    if (check != None):
-        print("It just works!")
 
 p1discard = Sprite("sprites/deckDiscardRectangle", filtering = False, position = (998, -1.87, -0.01))
 p1spellTrap1 = Sprite("sprites/zoneRectangle", filtering = False, position = (999, -1.85, -0.01))
@@ -83,7 +79,36 @@ base.camera3.setPos(0, 0, -2)
 base.camera3.node().getLens().setNearFar(1.9, 2.1)
 base.camera3.node().getLens().setAspectRatio(16.0/5.0)
 
-check = 1
-
 def updateSprites():
-    pass
+    global p1hand1
+    global p1hand2
+    global p1hand3
+    global p1hand4
+    global p1hand5
+    global p1hand6
+    global p1discardCard
+    global p1spellTrap1Card
+    global p1spellTrap2Card
+    global p1spellTrap3Card
+    global p1monster1Card
+    global p1monster2Card
+    global p1monster3Card
+    global p1monster4Card
+    global p1monster5Card
+    global p2hand1
+    global p2hand2
+    global p2hand3
+    global p2hand4
+    global p2hand5
+    global p2hand6
+    global p2spellTrap1Card
+    global p2spellTrap2Card
+    global p2spellTrap3Card
+    global p2discardCard
+    global p2monster1Card
+    global p2monster2Card
+    global p2monster3Card
+    global p2monster4Card
+    global p2monster5Card
+    
+    

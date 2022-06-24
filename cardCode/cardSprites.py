@@ -128,6 +128,11 @@ def updateSprites():
         else:
             globals()["p" + str(i) + "discardCard"].enabled = False
             
+        if (len(sharedGlobals["player" + str(i) + "Deck"]) > 0):
+            globals()["p" + str(i) + "pile"].enabled = True
+        else:
+            globals()["p" + str(i) + "pile"].enabled = False
+            
         if (sharedGlobals["player" + str(i) + "Life"] > 7):
             globals()["p" + str(i) + "lifeCircle"].color = color.turquoise
         else:

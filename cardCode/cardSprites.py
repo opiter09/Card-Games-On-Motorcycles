@@ -94,27 +94,35 @@ def updateSprites():
     sharedGlobals = sharedVariables.myGlobals()
     for i in [1, 2]:
         for j in [1, 2, 3, 4, 5, 6]:
-            if (len(sharedVariables.myGlobals()["player" + str(i) + "Hand"]) >= j):
+            if (len(sharedGlobals["player" + str(i) + "Hand"]) >= j):
                 globals()["p" + str(i) + "hand" + str(j)].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Hand"][j - 1])
                 globals()["p" + str(i) + "hand" + str(j)].enabled = True
             else:
                 globals()["p" + str(i) + "hand" + str(j)].enabled = False
 
         for j in [1, 2, 3, 4, 5]:
-            if (len(sharedVariables.myGlobals()["player" + str(i) + "Comrades"]) >= j):
-                globals()["p" + str(i) + "comrade" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Comrades"][j - 1])
+            if (len(sharedGlobals["player" + str(i) + "Comrades"]) >= j):
+                globals()["p" + str(i) + "comrade" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Comrades"][j - 1]["Name"])
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = True
+                if (sharedGlobals["player" + str(i) + "Comrades"][j - 1]["Contracted"] == "True"):
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 180
+                else:
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 0
             else:
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = False
 
         for j in [1, 2, 3]:
-            if (len(sharedVariables.myGlobals()["player" + str(i) + "Auxiliaries"]) >= j):
-                globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Auxiliaries"][j - 1])
+            if (len(sharedGlobals["player" + str(i) + "Auxiliaries"]) >= j):
+                globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Auxiliaries"][j - 1]["Name"])
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].enabled = True
+                if (sharedGlobals["player" + str(i) + "Auxiliaries"][j - 1]["Contracted"] == "True"):
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 180
+                else:
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 0
             else:
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].enabled = False
                 
-        if (len(sharedVariables.myGlobals()["player" + str(i) + "Discard"]) > 0):
+        if (len(sharedGlobals["player" + str(i) + "Discard"]) > 0):
             globals()["p" + str(i) + "discardCard"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Discard"][0])
             globals()["p" + str(i) + "discardCard"].enabled = True
         else:

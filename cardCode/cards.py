@@ -1,7 +1,8 @@
 from ursina import *
-import cardCode.cardSprites as cardSprites
+
 import cardCode.sharedVariables as sharedVariables
 
+import cardCode.cardSprites as cardSprites
 import cardCode.cardText as cardText
 
 def cardsUpdate():

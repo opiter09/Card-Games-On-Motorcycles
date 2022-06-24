@@ -22,11 +22,11 @@ player1Comrades = player2Comrades = []
 player1Auxiliaries = player2Auxiliaries = []
 player1Discard = player2Discard = []
 
-p1Life = 15
-p2Life = 15
+player1Life = 15
+player2Life = 15
 
-p1Stone = p1Plant = p1Metal = p1Animal = p1Cosmic = 0
-p2Stone = p2Plant = p2Metal = p2Animal = p2Cosmic = 0
+player1Stone = player1Plant = player1Metal = player1Animal = player1Cosmic = 0
+player2Stone = player2Plant = player2Metal = player2Animal = player2Cosmic = 0
 
 def myGlobals():
     return globals()

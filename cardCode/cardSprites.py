@@ -3,7 +3,6 @@ import cardCode.sharedVariables as sharedVariables
 
 board = Sprite("sprites/board", filtering = False, position = (1000, 0, 0), collider = None)
 
-
 p1discard = Sprite("sprites/deckDiscardRectangle", filtering = False, position = (998, -1.87, -0.01))
 p1auxiliary1 = Sprite("sprites/zoneRectangle", filtering = False, position = (999, -1.85, -0.01))
 p1auxiliary2 = Sprite("sprites/zoneRectangle", filtering = False, position = (1000, -1.85, -0.01))

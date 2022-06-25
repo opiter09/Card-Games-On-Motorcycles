@@ -16,8 +16,6 @@ discardSizeOne = Text(text = str(len(sharedVariables.player1Discard)), origin = 
 deckSizeTwo = Text(text = str(len(sharedVariables.player2Deck)), origin = (7, 3), color = color.blue)
 discardSizeTwo = Text(text = str(len(sharedVariables.player2Discard)), origin = (-14, 3), color = color.blue)
 
-mousePos = Text(text = str(mouse.position.getX()) + ", " + str(mouse.position.getY()))
-
 def updateText():
     globals()["lifeOne"].text = str(sharedVariables.player1Life)
     globals()["lifeTwo"].text = str(sharedVariables.player2Life)
@@ -33,5 +31,3 @@ def updateText():
     globals()["discardSizeOne"].text = str(len(sharedVariables.player1Discard))
     globals()["deckSizeTwo"].text = str(len(sharedVariables.player2Deck))
     globals()["discardSizeTwo"].text = str(len(sharedVariables.player2Discard))
-
-    globals()["mousePos"].text = str(mouse.position.getX()) + ", " + str(mouse.position.getY())

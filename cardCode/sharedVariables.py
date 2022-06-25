@@ -18,7 +18,12 @@ random.shuffle(player2Deck)
 player2Hand = player2Deck[0:4]
 player2Deck = player2Deck[4:40]
 
-player1Comrades = player2Comrades = []
+player1Comrades = player2Comrades = {
+    "0": {"Name": "Killer Clown", "Contracted": "True"},
+    "1": {"Name": "Killer Clown", "Contracted": "True"},
+    "2": {"Name": "Killer Clown", "Contracted": "True"},
+    "3": {"Name": "Killer Clown", "Contracted": "True"},
+    "4": {"Name": "Killer Clown", "Contracted": "True"},}
 player1Auxiliaries = player2Auxiliaries = []
 player1Discard = player2Discard = []
 

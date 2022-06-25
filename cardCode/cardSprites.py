@@ -101,20 +101,20 @@ def updateSprites():
 
         for j in [1, 2, 3, 4, 5]:
             if (len(sharedGlobals["player" + str(i) + "Comrades"]) >= j):
-                globals()["p" + str(i) + "comrade" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Comrades"][j - 1]["Name"])
+                globals()["p" + str(i) + "comrade" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Comrades"][str(j - 1)]["Name"])
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = True
-                if (sharedGlobals["player" + str(i) + "Comrades"][j - 1]["Contracted"] == "True"):
-                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 180
+                if (sharedGlobals["player" + str(i) + "Comrades"][str(j - 1)]["Contracted"] == "True"):
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_z = 180
                 else:
-                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 0
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_z = 0
             else:
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = False
 
         for j in [1, 2, 3]:
             if (len(sharedGlobals["player" + str(i) + "Auxiliaries"]) >= j):
-                globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Auxiliaries"][j - 1]["Name"])
+                globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(sharedGlobals["player" + str(i) + "Auxiliaries"][str(j - 1)]["Name"])
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].enabled = True
-                if (sharedGlobals["player" + str(i) + "Auxiliaries"][j - 1]["Contracted"] == "True"):
+                if (sharedGlobals["player" + str(i) + "Auxiliaries"][str(j - 1)]["Contracted"] == "True"):
                     globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 180
                 else:
                     globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_y = 0

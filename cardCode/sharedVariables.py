@@ -19,16 +19,14 @@ player2Hand = player2Deck[0:4]
 player2Deck = player2Deck[4:40]
 
 player1Comrades = player2Comrades = {
-    "0": {"Name": "Killer Clown", "Contracted": "True"},
-    "1": {"Name": "Killer Clown", "Contracted": "True"},
-    "2": {"Name": "Killer Clown", "Contracted": "True"},
-    "3": {"Name": "Killer Clown", "Contracted": "True"},
-    "4": {"Name": "Killer Clown", "Contracted": "True"}
+    "0": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1},
+    "1": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1},
+    "2": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1},
+    "3": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1}
 }
 player1Auxiliaries = player2Auxiliaries = {
-    "0": {"Name": "Killer Clown", "Contracted": "True"},
-    "1": {"Name": "Killer Clown", "Contracted": "True"},
-    "2": {"Name": "Killer Clown", "Contracted": "True"}
+    "0": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1},
+    "1": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1}
 }
 player1Discard = player2Discard = ["Killer Clown"]
 

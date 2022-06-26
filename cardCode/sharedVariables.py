@@ -23,8 +23,13 @@ player1Comrades = player2Comrades = {
     "1": {"Name": "Killer Clown", "Contracted": "True"},
     "2": {"Name": "Killer Clown", "Contracted": "True"},
     "3": {"Name": "Killer Clown", "Contracted": "True"},
-    "4": {"Name": "Killer Clown", "Contracted": "True"},}
-player1Auxiliaries = player2Auxiliaries = []
+    "4": {"Name": "Killer Clown", "Contracted": "True"}
+}
+player1Auxiliaries = player2Auxiliaries = {
+    "0": {"Name": "Killer Clown", "Contracted": "True"},
+    "1": {"Name": "Killer Clown", "Contracted": "True"},
+    "2": {"Name": "Killer Clown", "Contracted": "True"}
+}
 player1Discard = player2Discard = []
 
 player1Life = 15

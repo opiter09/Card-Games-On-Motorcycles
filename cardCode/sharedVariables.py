@@ -30,7 +30,7 @@ player1Auxiliaries = player2Auxiliaries = {
     "1": {"Name": "Killer Clown", "Contracted": "True"},
     "2": {"Name": "Killer Clown", "Contracted": "True"}
 }
-player1Discard = player2Discard = []
+player1Discard = player2Discard = ["Killer Clown"]
 
 player1Life = 15
 player2Life = 15

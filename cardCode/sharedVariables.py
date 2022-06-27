@@ -1,6 +1,9 @@
 import json
 import random
 
+firstPlayer = round(random.randint(500, 1000) / 500)
+#print(firstPlayer)
+
 f = open("player1.txt")
 player1Deck = json.load(f)
 f.close()

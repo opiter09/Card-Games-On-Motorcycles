@@ -53,6 +53,13 @@ for i in [1, 2]:
         else:
             globals()["p" + str(i) + "discardButton"] = Button(visible = False, scale = 0.08, position = (-0.3 + 0.5, -0.07), enabled = False)
             
+    classificationTable = [ "Stone", "Plant", "Metal", "Animal", "Cosmic" ]
+    for j in [1, 2, 3, 4, 5]:
+        if (i == 1):
+            globals()["p" + str(i) + classificationTable[j - 1] + "Button"] = Button(visible = False, scale = 0.05, position = (-0.675 + (j / 15), -0.34))
+        else:
+            globals()["p" + str(i) + classificationTable[j - 1] + "Button"] = Button(visible = False, scale = 0.05, position = (0.28 + (j / 15), -0.15))
+            
 def updateButtons():
     for i in [1, 2]:
         for j in [1, 2, 3, 4, 5, 6]:

@@ -30,14 +30,14 @@ def cardsUpdate():
     if (check >= 2):
         check = 0
         check2 = 0
-        application.quit()
+        #application.quit()
     elif (check != 0) and (check < 2):
         check = check + 0.007
 
     if (check2 >= 2):
         check = 0
         check2 = 0
-        application.quit()
+        #application.quit()
     elif (check2 != 0) and (check2 < 2):
         check2 = check2 + 0.007
 

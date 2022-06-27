@@ -25,6 +25,7 @@ def cardsUpdate():
         #application.quit()
     #elif (check != 0) and (check < 2):
         #check = check + 0.2
+    sharedVariables.myGlobals()["player1Hand"][0] = "Foolish Charge"
 
     cardText.updateText()
     cardSprites.updateSprites()

@@ -21,7 +21,9 @@ def makeTooltipText(i, j, entry, theString, change):
         else:
             text = text + "Strength: " + str(entry["strength"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["StrengthChange"])
             text = text + "  Vitality: " + str(entry["vitality"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["VitalityChange"]) + "\n"
-
+    if (change == True):
+        for key in shared["player" + str(i) + theString][str(j - 1)]["Counters"]:
+            text = text + key + ": " + str(shared["player" + str(i) + theString][str(j - 1)]["Counters"][key]) + "\n"
     text = text + entry["type"]
     if (entry["type"] == "Comrade"):
         text = text + "~" + entry["subType"]

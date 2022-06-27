@@ -5,7 +5,9 @@ import cardCode.sharedVariables as sharedVariables
 
 import cardCode.cardSprites as cardSprites
 import cardCode.cardText as cardText
-import cardCode.buttonTooltips as buttonTooltips
+import cardCode.cardButtons as cardButtons
+import cardCode.buttonTooltips
+import cardCode.buttonMouseEvents
 
 #check = 0
 #for i in [1, 2]:
@@ -26,7 +28,7 @@ def cardsUpdate():
 
     cardText.updateText()
     cardSprites.updateSprites()
-    buttonTooltips.updateTooltips()
+    cardButtons.updateButtons()
     
 def cardsInput(key):
     pass

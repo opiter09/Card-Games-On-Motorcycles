@@ -14,7 +14,12 @@ def update():   # update gets automatically called.
     racing.racingUpdate()
     cards.cardsUpdate()
 
+p = WindowPanel(title = "", text = "CARD GAMES " + "\n" + "ON MOTORCYCLES", text_color = color.magenta, position = (0, 0.025, 0))
+
 def input(key):
+    global p
+    if (key == "enter"):
+        p.enabled = False
     if (key == "escape"):
         application.quit()
     racing.racingInput(key)

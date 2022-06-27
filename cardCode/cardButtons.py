@@ -52,3 +52,16 @@ for i in [1, 2]:
             globals()["p" + str(i) + "discardButton"] = Button(scale = 0.08, position = (-0.3 + 0.1, -0.41), enabled = False)
         else:
             globals()["p" + str(i) + "discardButton"] = Button(scale = 0.08, position = (-0.3 + 0.5, -0.07), enabled = False)
+            
+def updateButtons():
+    for i in [1, 2]:
+        for j in [1, 2, 3, 4, 5, 6]:
+            if (j <= len(shared["player" + str(i) + "Hand"])):
+                globals()["p" + str(i) + "hand" + str(j) + "Button"].enabled = True
+            else:
+                globals()["p" + str(i) + "hand" + str(j) + "Button"].enabled = False
+
+        if (len(shared["player" + str(i) + "Discard"]) > 0):
+            globals()["p" + str(i) + "discardButton"].enabled = True  
+        else:
+            globals()["p" + str(i) + "discardButton"].enabled = False        

@@ -122,19 +122,15 @@ def updateTooltips():
                     effectsLength = effectsLength + len(entry["effects"][k])
                 sizeFactor = effectsLength / 79.15
                 if (i == 1):
-                    buttons["p" + str(i) + "hand" + str(j) + "Button"].enabled = True
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.text = text
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.world_x = -17.5
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.world_y = -2.3 - sizeFactor
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.wordwrap = 40
                 else:
-                    buttons["p" + str(i) + "hand" + str(j) + "Button"].enabled = True
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.text = text
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.world_x = 5.5
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.world_y = -5.6 - sizeFactor
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.wordwrap = 40
-            else:
-                buttons["p" + str(i) + "hand" + str(j) + "Button"].enabled = False
 
         for j in [1, 2, 3, 4, 5]:
             if (j <= len(shared["player" + str(i) + "Comrades"])):
@@ -186,17 +182,12 @@ def updateTooltips():
                 effectsLength = effectsLength + len(entry["effects"][k])
             sizeFactor = effectsLength / 79.15
             if (i == 1):
-                buttons["p" + str(i) + "discardButton"].enabled = True
                 buttons["p" + str(i) + "discardButton"].tooltip.text = text
                 buttons["p" + str(i) + "discardButton"].tooltip.world_x = -17.5
                 buttons["p" + str(i) + "discardButton"].tooltip.world_y = -2.3 - sizeFactor
                 buttons["p" + str(i) + "discardButton"].tooltip.wordwrap = 40
             else:
-                buttons["p" + str(i) + "discardButton"].enabled = True
                 buttons["p" + str(i) + "discardButton"].tooltip.text = text
                 buttons["p" + str(i) + "discardButton"].tooltip.world_x = 5.5
                 buttons["p" + str(i) + "discardButton"].tooltip.world_y = -5.6 - sizeFactor
-                buttons["p" + str(i) + "discardButton"].tooltip.wordwrap = 40
-        else:
-            buttons["p" + str(i) + "discardButton"].enabled = False
-            buttons["p" + str(i) + "discardButton"].tooltip.text = ""          
+                buttons["p" + str(i) + "discardButton"].tooltip.wordwrap = 40        

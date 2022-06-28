@@ -59,6 +59,11 @@ for i in [1, 2]:
             globals()["p" + str(i) + classificationTable[j - 1] + "Button"] = Button(visible = False, scale = 0.05, position = (-0.675 + (j / 15), -0.34))
         else:
             globals()["p" + str(i) + classificationTable[j - 1] + "Button"] = Button(visible = False, scale = 0.05, position = (0.28 + (j / 15), -0.15))
+    
+    if (i == 1):
+        globals()["p" + str(i) + "phasesButton"] = Button(visible = False, scale = 0.06, position = (-0.69 + (6 / 15), -0.34))
+    else:
+        globals()["p" + str(i) + "phasesButton"] = Button(visible = False, scale = 0.06, position = (0.295, -0.15))
             
 def updateButtons():
     for i in [1, 2]:

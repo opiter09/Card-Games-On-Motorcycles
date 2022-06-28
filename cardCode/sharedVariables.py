@@ -6,9 +6,9 @@ player2Phase = ""
 firstPlayer = round(random.randint(500, 1000) / 500)
 if (firstPlayer == 1):
     player1Phase = "relaxation"
-    player2Phase = "end"
+    player2Phase = "notMe"
 else:
-    player1Phase = "end"
+    player1Phase = "notMe"
     player2Phase = "relaxation"
 
 f = open("player1.txt")

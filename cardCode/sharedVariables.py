@@ -5,11 +5,11 @@ player1Phase = ""
 player2Phase = ""
 firstPlayer = round(random.randint(500, 1000) / 500)
 if (firstPlayer == 1):
-    player1Phase = "contract"
+    player1Phase = "relaxation"
     player2Phase = "end"
 else:
     player1Phase = "end"
-    player2Phase = "contract"
+    player2Phase = "relaxation"
 
 f = open("player1.txt")
 player1Deck = json.load(f)

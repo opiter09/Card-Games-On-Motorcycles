@@ -19,8 +19,8 @@ a Comrade is terminated, put a Blaze Counter on Forest Fire, then deal damage to
     "Trebuchet": {
         "cost": "4M",
         "type": "Aether",
-        "effects": [ "Terminate a Stone Comrade: Trebuchet deals damage equal to its Vitality to target Comrade. If the terminated Comrade had \
-        Blaze Counters on it, Trebuchet also deals damage equal to its Strength to the target Comrade's controller." ]
+        "effects": [ "Terminate a Stone Comrade in your territory: Trebuchet deals damage equal to its Vitality to target Comrade. If the terminated Comrade had \
+Blaze Counters on it, Trebuchet also deals damage equal to its Strength to the target Comrade's controller." ]
     },
 
     "Foolish Charge": {
@@ -36,7 +36,8 @@ Comrades get +2 Strength and must attack if able. At the beginning of this turn'
         "subType": "Laborer",
         "strength": 1,
         "vitality": 5,
-        "effects": [ "1M: You may put a card named \"Trebuchet\" from your hand directly into your territory." ]
+        "effects": [ "Terminate Wheel Runner and 1M: If you have an unoccupied Auxiliary Zone, search your address book for a card named \"Trebuchet\", \
+put it directly into your territory, then shuffle your address book." ]
     },
 
     "Alien Observer": {

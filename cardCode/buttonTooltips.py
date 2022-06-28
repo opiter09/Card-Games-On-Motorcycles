@@ -7,6 +7,7 @@ shared = sharedVariables.myGlobals()
 import cardCode.cardButtons as cardButtons
 buttons = cardButtons.myGlobals()
 
+countersNumber = 0
 def makeTooltipText(i, j, entry, theString, change):
     if (j > len(shared["player" + str(i) + theString])):
         return ""
@@ -21,9 +22,14 @@ def makeTooltipText(i, j, entry, theString, change):
         else:
             text = text + "Strength: " + str(entry["strength"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["StrengthChange"])
             text = text + "  Vitality: " + str(entry["vitality"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["VitalityChange"]) + "\n"
+
     if (change == True):
+        globals()["countersNumber"] = len(shared["player" + str(i) + theString][str(j - 1)]["Counters"])
         for key in shared["player" + str(i) + theString][str(j - 1)]["Counters"]:
             text = text + key + ": " + str(shared["player" + str(i) + theString][str(j - 1)]["Counters"][key]) + "\n"
+    else:
+        globals()["countersNumber"] = 0
+
     text = text + entry["type"]
     if (entry["type"] == "Comrade"):
         text = text + "~" + entry["subType"]
@@ -41,7 +47,7 @@ for i in [1, 2]:
             effectsLength = 0
             for k in range(len(entry["effects"])):
                 effectsLength = effectsLength + len(entry["effects"][k])
-            sizeFactor = effectsLength / 79.15
+            sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
             if (i == 1):
                 buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip = Tooltip(text, scale = 0.95, world_x = -17.5, world_y = -2.3 - sizeFactor,
                     ignore = True, background = False, color = color.white)
@@ -61,7 +67,7 @@ for i in [1, 2]:
             effectsLength = 0
             for k in range(len(entry["effects"])):
                 effectsLength = effectsLength + len(entry["effects"][k])
-            sizeFactor = effectsLength / 79.15
+            sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
             if (i == 1):
                 buttons["p" + str(i) + "comrade" + str(j) + "Button"].tooltip = Tooltip(text, scale = 0.95, world_x = -17.5, world_y = -2.3 - sizeFactor,
                     ignore = True, background = False, color = color.white)
@@ -81,7 +87,7 @@ for i in [1, 2]:
             effectsLength = 0
             for k in range(len(entry["effects"])):
                 effectsLength = effectsLength + len(entry["effects"][k])
-            sizeFactor = effectsLength / 79.15
+            sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
             if (i == 1):
                 buttons["p" + str(i) + "auxiliary" + str(j) + "Button"].tooltip = Tooltip(text, scale = 0.95, world_x = -17.5, world_y = -2.3 - sizeFactor,
                     ignore = True, background = False, color = color.white)
@@ -100,7 +106,7 @@ for i in [1, 2]:
         effectsLength = 0
         for k in range(len(entry["effects"])):
             effectsLength = effectsLength + len(entry["effects"][k])
-        sizeFactor = effectsLength / 79.15
+        sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
         if (i == 1):
             buttons["p" + str(i) + "discardButton"].tooltip = Tooltip(text, scale = 0.95, world_x = -17.5, world_y = -2.3 - sizeFactor,
                 ignore = True, background = False, color = color.white)
@@ -122,7 +128,7 @@ def updateTooltips():
                 effectsLength = 0
                 for k in range(len(entry["effects"])):
                     effectsLength = effectsLength + len(entry["effects"][k])
-                sizeFactor = effectsLength / 79.15
+                sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
                 if (i == 1):
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.text = text
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.world_x = -17.5
@@ -141,7 +147,7 @@ def updateTooltips():
                 effectsLength = 0
                 for k in range(len(entry["effects"])):
                     effectsLength = effectsLength + len(entry["effects"][k])
-                sizeFactor = effectsLength / 79.15
+                sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
                 if (i == 1):
                     buttons["p" + str(i) + "comrade" + str(j) + "Button"].tooltip.text = text
                     buttons["p" + str(i) + "comrade" + str(j) + "Button"].tooltip.world_x = -17.5
@@ -162,7 +168,7 @@ def updateTooltips():
                 effectsLength = 0
                 for k in range(len(entry["effects"])):
                     effectsLength = effectsLength + len(entry["effects"][k])
-                sizeFactor = effectsLength / 79.15
+                sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
                 if (i == 1):
                     buttons["p" + str(i) + "auxiliary" + str(j) + "Button"].tooltip.text = text
                     buttons["p" + str(i) + "auxiliary" + str(j) + "Button"].tooltip.world_x = -17.5
@@ -182,7 +188,7 @@ def updateTooltips():
             effectsLength = 0
             for k in range(len(entry["effects"])):
                 effectsLength = effectsLength + len(entry["effects"][k])
-            sizeFactor = effectsLength / 79.15
+            sizeFactor = (effectsLength / 79.15) + (globals()["countersNumber"] / 2)
             if (i == 1):
                 buttons["p" + str(i) + "discardButton"].tooltip.text = text
                 buttons["p" + str(i) + "discardButton"].tooltip.world_x = -17.5

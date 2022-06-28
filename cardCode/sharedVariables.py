@@ -21,7 +21,7 @@ player2Hand = player2Deck[0:4]
 player2Deck = player2Deck[4:40]
 
 player1Comrades = player2Comrades = {
-    "0": {"Name": "Wheel Runner", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": { "Blaze": 1 }},
+    "0": {"Name": "Wheel Runner", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
     "1": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
     "2": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
     "3": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}}

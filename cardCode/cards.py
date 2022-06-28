@@ -12,9 +12,9 @@ import cardCode.buttonMouseEvents
 check = 0
 check2 = 0
 for i in [1, 2]:
-    if (len(sharedVariables.myGlobals()["player" + str(i) + "Deck"]) != 40):
+    if (len(sharedVariables.myGlobals()["player" + str(i) + "OriginalDeck"]) != 40):
         check2 = 1
-    counting = collections.Counter(sharedVariables.myGlobals()["player" + str(i) + "Deck"])
+    counting = collections.Counter(sharedVariables.myGlobals()["player" + str(i) + "OriginalDeck"])
     for k in counting.values():
         if (k > 2):
             check = 1

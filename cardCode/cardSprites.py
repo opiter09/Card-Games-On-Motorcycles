@@ -36,6 +36,7 @@ p1comrade5Card = Sprite("sprites/cardFront", filtering = False, position = (1002
 
 p1lifeCircle = Entity(model = "circle", position = (991.65, -1.87, 0), scale = 0.8, color = color.turquoise)
 p1manaBox = Entity(model = "quad", position = (995.3, -1, 0), color = color.gray, scale = (3, 0.5))
+p1phaseIcon = Sprite(sharedVariables.myGlobals()["player1Phase"] + "Phase", filtering = False, position = (997.2, -1, -0.05), scale = 0.15)
 
 p2deck = Sprite("sprites/deckDiscardRectangle", filtering = False, position = (998, 1.965, -0.01))
 p2pile = Sprite("sprites/deckPile", filtering = False, position = (998.01, 1.955, -0.01))
@@ -70,6 +71,7 @@ p2comrade5Card = Sprite("sprites/cardFront", filtering = False, position = (1002
 
 p2lifeCircle = Entity(model = "circle", position = (1008.35, 1.965, 0), scale = 0.8, color = color.turquoise)
 p2manaBox = Entity(model = "quad", position = (1004.75, 1.15, 0), color = color.gray, scale = (3, 0.5))
+p2phaseIcon = Sprite(sharedVariables.myGlobals()["player2Phase"] + "Phase", filtering = False, position = (1002.83, 1.1, -0.05), scale = 0.15)
 
 base.camera3 = base.makeCamera(base.win, displayRegion = (0, 1, 0, 0.5))
 base.camera3.reparentTo(board)
@@ -135,5 +137,6 @@ def updateSprites():
         if (sharedGlobals["player" + str(i) + "Life"] > 7):
             globals()["p" + str(i) + "lifeCircle"].color = color.turquoise
         else:
-            globals()["p" + str(i) + "lifeCircle"].color = color.red       
-    
+            globals()["p" + str(i) + "lifeCircle"].color = color.red
+            
+        globals()["p" + str(i) + "phaseIcon"].texture = sharedVariables.myGlobals()["player" + str(i) + "Phase"] + "Phase"

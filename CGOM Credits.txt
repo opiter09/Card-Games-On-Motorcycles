@@ -29,3 +29,6 @@ https://cafedraw.itch.io/fantasy-card-assets.
 
 The board the cards are played on comes from the 2D Chess Pack by Screaming Brain
 Studios. It can be found at https://screamingbrainstudios.itch.io/isometric-chess.
+
+The phase icons come from Card Game Graphical Assets by Entity of OSP. It can be
+found at https://entity-of-osp.itch.io/card-game-assets.

@@ -36,7 +36,7 @@ Comrades get +2 Strength and must attack if able. At the beginning of this turn'
         "subType": "Laborer",
         "strength": 1,
         "vitality": 5,
-        "effects": [ "Terminate Wheel Runner and 1M: If you have an unoccupied Auxiliary Zone, search your address book for a card named \"Trebuchet\", \
+        "effects": [ "Terminate Wheel Runner and 1MM: If you have an unoccupied Auxiliary Zone, search your address book for a card named \"Trebuchet\", \
 put it directly into your territory, then shuffle your address book." ]
     },
 

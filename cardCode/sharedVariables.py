@@ -11,7 +11,7 @@ else:
     player1Phase = "notMe"
     player2Phase = "relaxation"
 
-f = open("player1.txt")
+f = open("player1Deck.json")
 player1Deck = json.load(f)
 f.close()
 player1Deck = player1OriginalDeck = list(player1Deck.values())
@@ -19,7 +19,7 @@ random.shuffle(player1Deck)
 player1Hand = player1Deck[0:4]
 player1Deck = player1Deck[4:40]
 
-f = open("player2.txt")
+f = open("player2Deck.json")
 player2Deck = json.load(f)
 f.close()
 player2Deck = player2OriginalDeck = list(player2Deck.values())

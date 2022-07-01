@@ -4,11 +4,13 @@ import cardCode.sharedVariables as sharedVariables
 lifeOne = Text(text = str(sharedVariables.player1Life), origin = (29.5, 16.75), color = color.black)
 lifeTwo = Text(text = str(sharedVariables.player2Life), origin = (-29.4, 3), color = color.black)
 
-manaStringOne = "S " + str(sharedVariables.player1Stone) + " | P " + str(sharedVariables.player1Plant) + " | M " + str(sharedVariables.player1Metal) + " | A " + \
-    str(sharedVariables.player1Animal) + " | C " + str(sharedVariables.player1Cosmic)
+manaStringOne = "S " + str(sharedVariables.player1CurrentStone) + " | P " + str(sharedVariables.player1CurrentPlant) + " | M " \
+    + str(sharedVariables.player1CurrentMetal) + " | A " + \
+    str(sharedVariables.player1CurrentAnimal) + " | C " + str(sharedVariables.player1CurrentCosmic)
 manaOne = Text(text = manaStringOne, origin = (1.615, 13.75), color = color.white)
-manaStringTwo = "S " + str(sharedVariables.player2Stone) + " | P " + str(sharedVariables.player2Plant) + " | M " + str(sharedVariables.player2Metal) + " | A " + \
-    str(sharedVariables.player2Animal) + " | C " + str(sharedVariables.player2Cosmic)
+manaStringTwo = "S " + str(sharedVariables.player2CurrentStone) + " | P " + str(sharedVariables.player2CurrentPlant) + " | M " \
+    + str(sharedVariables.player2CurrentMetal) + " | A " + \
+    str(sharedVariables.player2CurrentAnimal) + " | C " + str(sharedVariables.player2CurrentCosmic)
 manaTwo = Text(text = manaStringTwo, origin = (-1.63, 6), color = color.white)
 
 deckSizeOne = Text(text = str(len(sharedVariables.player1Deck)), origin = (-7, 16.75), color = color.blue)
@@ -20,11 +22,13 @@ def updateText():
     globals()["lifeOne"].text = str(sharedVariables.player1Life)
     globals()["lifeTwo"].text = str(sharedVariables.player2Life)
 
-    manaStringOne = "S " + str(sharedVariables.player1Stone) + " | P " + str(sharedVariables.player1Plant) + " | M " + str(sharedVariables.player1Metal) + " | A " + \
-        str(sharedVariables.player1Animal) + " | C " + str(sharedVariables.player1Cosmic)
+    manaStringOne = "S " + str(sharedVariables.player1CurrentStone) + " | P " + str(sharedVariables.player1CurrentPlant) + " | M " \
+        + str(sharedVariables.player1CurrentMetal) + " | A " + \
+        str(sharedVariables.player1CurrentAnimal) + " | C " + str(sharedVariables.player1CurrentCosmic)
     globals()["manaOne"].text = manaStringOne
-    manaStringTwo = "S " + str(sharedVariables.player2Stone) + " | P " + str(sharedVariables.player2Plant) + " | M " + str(sharedVariables.player2Metal) + " | A " + \
-        str(sharedVariables.player2Animal) + " | C " + str(sharedVariables.player2Cosmic)
+    manaStringTwo = "S " + str(sharedVariables.player2CurrentStone) + " | P " + str(sharedVariables.player2CurrentPlant) + " | M " \
+        + str(sharedVariables.player2CurrentMetal) + " | A " + \
+        str(sharedVariables.player2CurrentAnimal) + " | C " + str(sharedVariables.player2CurrentCosmic)
     globals()["manaTwo"].text = manaStringTwo
     
     globals()["deckSizeOne"].text = str(len(sharedVariables.player1Deck))

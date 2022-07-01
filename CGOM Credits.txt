@@ -32,3 +32,6 @@ Studios. It can be found at https://screamingbrainstudios.itch.io/isometric-ches
 
 The phase icons come from Card Game Graphical Assets by Entity of OSP. It can be
 found at https://entity-of-osp.itch.io/card-game-assets.
+
+The card game sound effects come from the Fantasy Card Game SFX Pack, by Olex
+Mazur. It can be found at https://olexmazur.itch.io/fantasy-card-game.

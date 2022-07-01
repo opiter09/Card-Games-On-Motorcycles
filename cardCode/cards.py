@@ -2,6 +2,7 @@ from ursina import *
 import collections
 
 import cardCode.sharedVariables as sharedVariables
+shared = sharedVariables.myGlobals()
 
 import cardCode.cardSprites as cardSprites
 import cardCode.cardText as cardText
@@ -12,9 +13,9 @@ import cardCode.buttonMouseEvents
 check = 0
 check2 = 0
 for i in [1, 2]:
-    if (len(sharedVariables.myGlobals()["player" + str(i) + "OriginalDeck"]) != 40):
+    if (len(shared["player" + str(i) + "OriginalDeck"]) != 40):
         check2 = 1
-    counting = collections.Counter(sharedVariables.myGlobals()["player" + str(i) + "OriginalDeck"])
+    counting = collections.Counter(shared["player" + str(i) + "OriginalDeck"])
     for k in counting.values():
         if (k > 2):
             check = 1
@@ -23,9 +24,12 @@ if (check == 1):
 if (check2 == 1):
     Text(text = "ILLEGAL DECK DETECTED. DECKS MUST HAVE EXACTLY 40 CARDS.", color = color.red, origin = (0, -9))
 
+doOnce = 0
 def cardsUpdate():
     global check
     global check2
+    global doOnce
+    global shared
 
     if (check >= 2):
         check = 0
@@ -44,6 +48,14 @@ def cardsUpdate():
     cardText.updateText()
     cardSprites.updateSprites()
     cardButtons.updateButtons()
+    
+    for i in [1, 2]:
+        if (shared["player" + str(i) + "Phase"] == "Relaxation"):
+            if (doOnce == 0):
+                Audio("cardCode/sounds/beginTurn.wav")
+                doOnce = 1
+            
+            
     
 def cardsInput(key):
     pass

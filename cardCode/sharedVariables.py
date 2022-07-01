@@ -5,11 +5,11 @@ player1Phase = ""
 player2Phase = ""
 firstPlayer = round(random.randint(500, 1000) / 500)
 if (firstPlayer == 1):
-    player1Phase = "relaxation"
-    player2Phase = "notMe"
+    player1Phase = "Relaxation"
+    player2Phase = "NotMe"
 else:
-    player1Phase = "notMe"
-    player2Phase = "relaxation"
+    player1Phase = "NotMe"
+    player2Phase = "Relaxation"
 
 f = open("player1Deck.json")
 player1Deck = json.load(f)

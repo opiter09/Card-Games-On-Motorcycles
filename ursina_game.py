@@ -18,7 +18,7 @@ p = WindowPanel(title = "", text = "     CARD GAMES          By" + "\n" + "ON MO
 
 def input(key):
     global p
-    if (key == "enter"):
+    if (key == "enter") and (p != None) and (p.enabled == True):
         p.enabled = False
     if (key == "escape"):
         application.quit()

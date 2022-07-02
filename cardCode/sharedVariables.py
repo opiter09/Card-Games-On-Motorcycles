@@ -10,6 +10,7 @@ if (firstPlayer == 1):
 else:
     player1Phase = "NotMe"
     player2Phase = "Relaxation"
+turnCount = 0
 
 f = open("player1Deck.json")
 player1Deck = json.load(f)

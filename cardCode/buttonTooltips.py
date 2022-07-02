@@ -1,3 +1,6 @@
+strengthString = "Strength"
+vitalityString = "Vitality"
+
 from ursina import *
 from cardCode.bigCardTable import bigTable
 
@@ -18,12 +21,12 @@ def makeTooltipText(i, j, entry, theString, change):
 
     if (entry["type"] == "Comrade"):
         if (change == False):
-            text = text + "Strength: " + str(entry["strength"]) + "  Vitality: " + str(entry["vitality"]) + "\n"
+            text = text + globals()["strengthString"] + ": " + str(entry["strength"]) + "  " + globals()["vitalityString"] + ": " + str(entry["vitality"]) + "\n"
         else:
-            text = text + "Strength: " + str(entry["strength"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["StrengthChange"])
-            text = text + "  Vitality: " + str(entry["vitality"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["VitalityChange"]) + "\n"
+            text = text + globals()["strengthString"] + ": " + str(entry["strength"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["StrengthChange"])
+            text = text + "  " + globals()["vitalityString"] + ": " + str(entry["vitality"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["VitalityChange"]) + "\n"
     else:
-        text = text + "Strength: " + "N/A" + "  Vitality: " + "N/A" + "\n"
+        text = text + globals()["strengthString"] + ": " + "N/A" + "  " + globals()["vitalityString"] + ": " + "N/A" + "\n"
 
     if (change == True):
         globals()["breaksNumber"] = len(shared["player" + str(i) + theString][str(j - 1)]["Counters"])

@@ -102,7 +102,7 @@ def updateSprites():
                 globals()["p" + str(i) + "hand" + str(j)].enabled = False
 
         for j in [1, 2, 3, 4, 5]:
-            if (len(shared["player" + str(i) + "Comrades"]) >= j):
+            if (len(shared["player" + str(i) + "Comrades"][str(j - 1)]) > 0):
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(shared["player" + str(i) + "Comrades"][str(j - 1)]["Name"])
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = True
                 if (shared["player" + str(i) + "Comrades"][str(j - 1)]["Contracted"] == "True"):
@@ -113,7 +113,7 @@ def updateSprites():
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = False
 
         for j in [1, 2, 3]:
-            if (len(shared["player" + str(i) + "Auxiliaries"]) >= j):
+            if (len(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]) > 0):
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Name"])
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].enabled = True
                 if (shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Contracted"] == "True"):

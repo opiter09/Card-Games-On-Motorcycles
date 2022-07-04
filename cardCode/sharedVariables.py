@@ -32,11 +32,14 @@ player1Comrades = player2Comrades = {
     "0": {"Name": "Wheel Runner", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
     "1": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
     "2": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
-    "3": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}}
+    "3": {},
+    "4": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
+    "5": {}
 }
 player1Auxiliaries = player2Auxiliaries = {
     "0": {"Name": "Forest Fire", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
-    "1": {"Name": "Trebuchet", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}}
+    "1": {},
+    "2": {"Name": "Trebuchet", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}}
 }
 player1Discard = player2Discard = ["Killer Clown"]
 

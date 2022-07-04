@@ -12,11 +12,11 @@ buttons = cardButtons.myGlobals()
 
 breaksNumber = 0
 def makeTooltipText(i, j, entry, theString, change):
-    if (j > len(shared["player" + str(i) + theString])):
-        return ""
     if (change == True):
         text = shared["player" + str(i) + theString][str(j - 1)]["Name"] + "     " + entry["cost"] + "\n"
     else:
+        if (j > len(shared["player" + str(i) + theString])):
+            return ""
         text = shared["player" + str(i) + theString][j - 1] + "     " + entry["cost"] + "\n"
 
     if (entry["type"] == "Comrade"):
@@ -67,7 +67,7 @@ for i in [1, 2]:
                 buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip = Tooltip("", scale = 0.95, ignore = True, background = False, color = color.white)           
 
     for j in [1, 2, 3, 4, 5]:
-        if (j <= len(shared["player" + str(i) + "Comrades"])):
+        if (len(shared["player" + str(i) + "Comrades"][str(j - 1)]) > 0):
             entry = bigTable[shared["player" + str(i) + "Comrades"][str(j - 1)]["Name"]]
             text = makeTooltipText(i, j, entry, "Comrades", True)
             effectsLength = 0
@@ -87,7 +87,7 @@ for i in [1, 2]:
                 buttons["p" + str(i) + "comrade" + str(j) + "Button"].tooltip = Tooltip("", scale = 0.95, ignore = True, background = False, color = color.white)
 
     for j in [1, 2, 3]:
-        if (j <= len(shared["player" + str(i) + "Auxiliaries"])):
+        if (len(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]) > 0):
             entry = bigTable[shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Name"]]
             text = makeTooltipText(i, j, entry, "Auxiliaries", True)
             effectsLength = 0
@@ -147,7 +147,7 @@ def updateTooltips():
                     buttons["p" + str(i) + "hand" + str(j) + "Button"].tooltip.wordwrap = 40
 
         for j in [1, 2, 3, 4, 5]:
-            if (j <= len(shared["player" + str(i) + "Comrades"])):
+            if (len(shared["player" + str(i) + "Comrades"][str(j - 1)]) > 0):
                 entry = bigTable[shared["player" + str(i) + "Comrades"][str(j - 1)]["Name"]]
                 text = makeTooltipText(i, j, entry, "Comrades", True)
                 effectsLength = 0
@@ -168,7 +168,7 @@ def updateTooltips():
                 buttons["p" + str(i) + "comrade" + str(j) + "Button"].tooltip.text = ""
 
         for j in [1, 2, 3]:
-            if (j <= len(shared["player" + str(i) + "Auxiliaries"])):
+            if (len(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]) > 0):
                 entry = bigTable[shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Name"]]
                 text = makeTooltipText(i, j, entry, "Auxiliaries", True)
                 effectsLength = 0

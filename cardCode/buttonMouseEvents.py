@@ -1,8 +1,13 @@
 from ursina import *
 import cardCode.buttonTooltips as buttonTooltips
+import cardCode.cardText as cardText
 
 import cardCode.cardButtons as cardButtons
 buttons = cardButtons.myGlobals()
+
+import cardCode.sharedVariables as sharedVariables
+shared = sharedVariables.myGlobals()
+
 
 def test(param):
     print(param)
@@ -41,7 +46,18 @@ def discardClick(player):
     pass
     
 def influenceClick(player, classification):
-    pass
+    if (player == 1) and (cardText.myGlobals()["pickOne"].visible == True):
+        if (shared["player1Stone"] + shared["player1Plant"] + shared["player1Metal"] + shared["player1Animal"] + shared["player1Cosmic"] < 9):
+            shared["player1" + classification] = shared["player1" + classification] + 1
+            shared["player1Current" + classification] = shared["player1Current" + classification] + 1
+        cardText.myGlobals()["pickOne"].visible = False
+        shared["player1Phase"] = "Maintenance"
+    elif (player == 2) and (cardText.myGlobals()["pickTwo"].visible == True):
+        if (shared["player2Stone"] + shared["player2Plant"] + shared["player2Metal"] + shared["player2Animal"] + shared["player2Cosmic"] < 9):
+            shared["player2" + classification] = shared["player2" + classification] + 1
+            shared["player2Current" + classification] = shared["player2Current" + classification] + 1
+        cardText.myGlobals()["pickTwo"].visible = False
+        shared["player2Phase"] = "Maintenance"
     
 buttons["p1hand1Button"].on_double_click = Func(lambda: handClick(1, 1))
 buttons["p1hand2Button"].on_double_click = Func(lambda: handClick(1, 2))

@@ -44,19 +44,40 @@ def cardsUpdate():
         #application.quit()
     elif (check2 != 0) and (check2 < 2):
         check2 = check2 + 0.007
+    
+    for i in [1, 2]:
+        if (shared["player" + str(i) + "Phase"] == "Relaxation") and (shared["turnCount"] > 0) and (doOnce == 0):
+            doOnce = 1
+            Audio("cardCode/sounds/beginTurn.wav")
 
+            if (shared["turnCount"] > 0.5):
+                shared["turnCount"] = shared["turnCount"] + 1
+                if (len(shared["player" + str(i) + "Hand"]) == 6):
+                    shared["player" + str(i) + "Discard"].insert(0, shared["player" + str(i) + "Hand"][0])
+                    shared["player" + str(i) + "Hand"] = shared["player" + str(i) + "Hand"][1:6]
+                if (len(shared["player" + str(i) + "Deck"]) == 0):
+                    #eventual losing code
+                    pass
+                shared["player" + str(i) + "Hand"].insert(7, shared["player" + str(i) + "Deck"][0])
+                shared["player" + str(i) + "Deck"].pop(0)
+            else:
+                shared["turnCount"] = 1
+                
+            for j in [1, 2, 3, 4, 5]:
+                if (len(shared["player" + str(i) + "Comrades"][str(j - 1)]) > 0):
+                    shared["player" + str(i) + "Comrades"][str(j - 1)]["Contracted"] = "False"
+            for j in [1, 2, 3]:
+                if (len(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]) > 0):
+                    shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Contracted"] = "False"
+                    
+            if (i == 1):
+                cardText.myGlobals()["pickOne"].visible = True
+            else:
+                cardText.myGlobals()["pickTwo"].visible = True
+                
     cardText.updateText()
     cardSprites.updateSprites()
     cardButtons.updateButtons()
-    
-    for i in [1, 2]:
-        if (shared["player" + str(i) + "Phase"] == "Relaxation") and (shared["turnCount"] > 0):
-            if (doOnce == 0):
-                doOnce = 1
-                Audio("cardCode/sounds/beginTurn.wav")
-            
-            
-            
     
 def cardsInput(key):
     pass

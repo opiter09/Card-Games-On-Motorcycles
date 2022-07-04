@@ -1,6 +1,12 @@
 from ursina import *
 import cardCode.sharedVariables as sharedVariables
 
+def myGlobals():
+    return globals()
+
+pickOne = Text(text = "Select a type of influence point", origin = (1.25, 12.25), color = color.light_gray, visible = False)
+pickTwo = Text(text = "Select a type of influence point", origin = (-1.25, 7.5), color = color.light_gray, visible = False)
+
 lifeOne = Text(text = str(sharedVariables.player1Life), origin = (29.5, 16.75), color = color.black)
 lifeTwo = Text(text = str(sharedVariables.player2Life), origin = (-29.4, 3), color = color.black)
 

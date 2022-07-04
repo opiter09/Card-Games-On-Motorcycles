@@ -21,7 +21,7 @@ def input(key):
     global p
     if (key == "enter") and (p != None) and (p.enabled == True):
         p.enabled = False
-        sharedVariables.myGlobals()["turnCount"] = 1
+        sharedVariables.myGlobals()["turnCount"] = 0.5
 
     if (key == "escape"):
         application.quit()

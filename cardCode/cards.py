@@ -69,7 +69,9 @@ def cardsUpdate():
             for j in [1, 2, 3]:
                 if (len(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]) > 0):
                     shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Contracted"] = "False"
-                    
+            
+            for j in ["Stone", "Plant", "Metal", "Animal", "Cosmic"]:
+                shared["player" + str(i) + "Current" + j] = shared["player" + str(i) + j]
             if (i == 1):
                 cardText.myGlobals()["pickOne"].visible = True
             else:

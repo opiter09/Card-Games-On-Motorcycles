@@ -7,8 +7,8 @@ shared = sharedVariables.myGlobals()
 import cardCode.cardSprites as cardSprites
 import cardCode.cardText as cardText
 import cardCode.cardButtons as cardButtons
-import cardCode.buttonTooltips
-import cardCode.buttonMouseEvents
+import cardCode.buttonTooltips as buttonTooltips
+import cardCode.buttonMouseEvents as buttonMouseEvents
 
 check = 0
 check2 = 0
@@ -60,6 +60,7 @@ def cardsUpdate():
                     pass
                 shared["player" + str(i) + "Hand"].insert(7, shared["player" + str(i) + "Deck"][0])
                 shared["player" + str(i) + "Deck"].pop(0)
+                buttonTooltips.updateTooltips()
             else:
                 shared["turnCount"] = 1
                 

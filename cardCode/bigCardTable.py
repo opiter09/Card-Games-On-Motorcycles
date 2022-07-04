@@ -13,7 +13,7 @@ counters on it damages Oiled Stone, put a Blaze Counter on Oiled Stone." ]
         "cost": "2PP",
         "type": "Aether",
         "effects": [ "When there are no Comrades in either territory, terminate Forest Fire.", "When Forest Fire enters your territory or \
-a Comrade is terminated, put a Blaze Counter on Forest Fire, then deal damage to target Comrade equal to the number of Blaze Counters on Forest Fire." ]
+whenever a Comrade is terminated, put a Blaze Counter on Forest Fire, then deal damage to target Comrade equal to the number of Blaze Counters on Forest Fire." ]
     },
     
     "Trebuchet": {

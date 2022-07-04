@@ -50,10 +50,11 @@ def cardsUpdate():
     cardButtons.updateButtons()
     
     for i in [1, 2]:
-        if (shared["player" + str(i) + "Phase"] == "Relaxation"):
+        if (shared["player" + str(i) + "Phase"] == "Relaxation") and (shared["turnCount"] > 0):
             if (doOnce == 0):
-                Audio("cardCode/sounds/beginTurn.wav")
                 doOnce = 1
+                Audio("cardCode/sounds/beginTurn.wav")
+            
             
             
     

@@ -23,8 +23,10 @@ def makeTooltipText(i, j, entry, theString, change):
         if (change == False):
             text = text + globals()["strengthString"] + ": " + str(entry["strength"]) + "  " + globals()["vitalityString"] + ": " + str(entry["vitality"]) + "\n"
         else:
-            text = text + globals()["strengthString"] + ": " + str(entry["strength"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["StrengthChange"])
-            text = text + "  " + globals()["vitalityString"] + ": " + str(entry["vitality"]) + " + " + str(shared["player" + str(i) + theString][str(j - 1)]["VitalityChange"]) + "\n"
+            totalStrengthChange = shared["player" + str(i) + theString][str(j - 1)]["StrengthChange"] + shared["player" + str(i) + theString][str(j - 1)]["TempStrengthChange"]
+            totalVitalityChange = shared["player" + str(i) + theString][str(j - 1)]["VitalityChange"] + shared["player" + str(i) + theString][str(j - 1)]["TempVitalityChange"]
+            text = text + globals()["strengthString"] + ": " + str(entry["strength"]) + " + " + str(totalStrengthChange)
+            text = text + "  " + globals()["vitalityString"] + ": " + str(entry["vitality"]) + " + " + str(totalVitalityChange) + "\n"
     else:
         text = text + globals()["strengthString"] + ": " + "N/A" + "  " + globals()["vitalityString"] + ": " + "N/A" + "\n"
 

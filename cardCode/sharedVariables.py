@@ -16,22 +16,24 @@ else:
 turnCount = 0
 
 f = open("player1Deck.json")
-player1Deck = json.load(f)
+p1Deck = json.load(f)
 f.close()
-player1Deck = player1OriginalDeck = list(player1Deck.values())
+player1OriginalDeck = list(p1Deck.values())
+player1Deck = player1OriginalDeck
 random.shuffle(player1Deck)
 player1Hand = player1Deck[0:4]
 player1Deck = player1Deck[4:40]
 
 f = open("player2Deck.json")
-player2Deck = json.load(f)
+p2Deck = json.load(f)
 f.close()
-player2Deck = player2OriginalDeck = list(player2Deck.values())
+player2OriginalDeck = list(p2Deck.values())
+player2Deck = player2OriginalDeck
 random.shuffle(player2Deck)
 player2Hand = player2Deck[0:4]
 player2Deck = player2Deck[4:40]
 
-player1Comrades = player2Comrades = {
+player1Comrades = {
     "0": {"Name": "Wheel Runner", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
     "1": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
     "2": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
@@ -39,12 +41,28 @@ player1Comrades = player2Comrades = {
     "4": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
     "5": {}
 }
-player1Auxiliaries = player2Auxiliaries = {
+player2Comrades = {
+    "0": {"Name": "Wheel Runner", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
+    "1": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
+    "2": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
+    "3": {},
+    "4": {"Name": "Killer Clown", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "TempStrengthChange": -1, "TempVitalityChange": -1, "Counters": {}},
+    "5": {}
+}
+
+player1Auxiliaries = {
     "0": {"Name": "Forest Fire", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
     "1": {},
     "2": {"Name": "Trebuchet", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}}
 }
-player1Discard = player2Discard = ["Killer Clown"]
+player2Auxiliaries = {
+    "0": {"Name": "Forest Fire", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}},
+    "1": {},
+    "2": {"Name": "Trebuchet", "Contracted": "True", "StrengthChange": -1, "VitalityChange": -1, "Counters": {}}
+}
+
+player1Discard = [ "Killer Clown" ]
+player2Discard = ["Killer Clown"]
 
 player1Life = 15
 player2Life = 15

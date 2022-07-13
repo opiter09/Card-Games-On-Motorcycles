@@ -1,6 +1,7 @@
 from ursina import *
 import collections
 
+import cardCode.sharedFunctions as sharedFunctions
 import cardCode.sharedVariables as sharedVariables
 shared = sharedVariables.myGlobals()
 
@@ -51,15 +52,7 @@ def cardsUpdate():
             Audio("cardCode/sounds/beginTurn.wav")
 
             if (shared["turnCount"] > 0.5):
-                shared["turnCount"] = shared["turnCount"] + 1
-                if (len(shared["player" + str(i) + "Hand"]) == 6):
-                    shared["player" + str(i) + "Discard"].insert(0, shared["player" + str(i) + "Hand"][0])
-                    shared["player" + str(i) + "Hand"] = shared["player" + str(i) + "Hand"][1:6]
-                if (len(shared["player" + str(i) + "Deck"]) == 0):
-                    #eventual losing code
-                    pass
-                shared["player" + str(i) + "Hand"].insert(7, shared["player" + str(i) + "Deck"][0])
-                shared["player" + str(i) + "Deck"].pop(0)
+                sharedFunctions.drawCards(1, i)
                 buttonTooltips.updateTooltips()
             else:
                 shared["turnCount"] = 1

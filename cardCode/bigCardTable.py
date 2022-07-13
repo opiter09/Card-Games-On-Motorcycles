@@ -23,6 +23,12 @@ whenever a Comrade is terminated, put a Blaze Counter on Forest Fire, then deal 
 Blaze Counters on it, Trebuchet also deals damage equal to its Strength to the target Comrade's controller." ]
     },
 
+    "Desperate Summons": {
+        "cost": "2A",
+        "type": "Chant",
+        "effects": [ "Do the following twice: draw a card, then either play it immediately if you are fully able (ignoring timing), or discard it if you are not." ]
+    },
+
     "Foolish Charge": {
         "cost": "1A",
         "type": "Chant",

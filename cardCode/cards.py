@@ -42,11 +42,26 @@ def cardsUpdate():
     if (check2 >= 2):
         check = 0
         check2 = 0
-        #application.quit()
+        application.quit()
     elif (check2 != 0) and (check2 < 2):
         check2 = check2 + 0.007
     
+    if (shared["player1Life"] > 99):
+        shared["player1Life"] = 99
+    if (shared["player2Life"] > 99):
+        shared["player2Life"] = 99
+
+    if (shared["player1Life"] < 0):
+        shared["player1Life"] = 0
+    if (shared["player2Life"] < 0):
+        shared["player2Life"] = 0
+
     for i in [1, 2]:
+        if (shared["player" + str(i) + "Life"] == 0) and (check2 == 0):
+            other = { "1": "2", "2": "1" }
+            WindowPanel(title = "", text = "Player " + other[str(i)] + " wins!", text_color = color.magenta)
+            check2 = 1
+
         if (shared["player" + str(i) + "Phase"] == "Relaxation") and (shared["turnCount"] > 0) and (doOnce == 0):
             doOnce = 1
             Audio("cardCode/sounds/beginTurn.wav")

@@ -62,7 +62,7 @@ player2Auxiliaries = {
 }
 
 player1Discard = [ "Killer Clown" ]
-player2Discard = ["Killer Clown"]
+player2Discard = [ "Killer Clown" ]
 
 player1Life = 15
 player2Life = 15

@@ -7,8 +7,8 @@ def myGlobals():
 pickOne = Text(text = "Select a type of influence point", origin = (1.25, 12.25), color = color.light_gray, visible = False)
 pickTwo = Text(text = "Select a type of influence point", origin = (-1.25, 7.5), color = color.light_gray, visible = False)
 
-lifeOne = Text(text = str(sharedVariables.player1Life), origin = (29.5, 16.75), color = color.black)
-lifeTwo = Text(text = str(sharedVariables.player2Life), origin = (-29.4, 3), color = color.black)
+lifeOne = Text(text = str(sharedVariables.player1Life).zfill(2), origin = (29.5, 16.75), color = color.black)
+lifeTwo = Text(text = str(sharedVariables.player2Life).zfill(2), origin = (-29.4, 3), color = color.black)
 
 manaStringOne = "S " + str(sharedVariables.player1CurrentStone) + " | P " + str(sharedVariables.player1CurrentPlant) + " | M " \
     + str(sharedVariables.player1CurrentMetal) + " | A " + \
@@ -25,8 +25,8 @@ deckSizeTwo = Text(text = str(len(sharedVariables.player2Deck)), origin = (7, 3)
 discardSizeTwo = Text(text = str(len(sharedVariables.player2Discard)), origin = (-14, 3), color = color.gold)
 
 def updateText():
-    globals()["lifeOne"].text = str(sharedVariables.player1Life)
-    globals()["lifeTwo"].text = str(sharedVariables.player2Life)
+    globals()["lifeOne"].text = str(sharedVariables.player1Life).zfill(2)
+    globals()["lifeTwo"].text = str(sharedVariables.player2Life).zfill(2)
 
     manaStringOne = "S " + str(sharedVariables.player1CurrentStone) + " | P " + str(sharedVariables.player1CurrentPlant) + " | M " \
         + str(sharedVariables.player1CurrentMetal) + " | A " + \

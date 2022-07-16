@@ -92,4 +92,20 @@ def cardsUpdate():
     cardButtons.updateButtons()
     
 def cardsInput(key):
-    pass
+    global shared
+
+    if (key == "space"):
+        if (shared["player1Active"] == True):
+            shared["player1Active"] = False
+            shared["resolveNow"] = shared["resolveNow"] + 1
+            if (shared["resolveNow"] < 2):
+                shared["player2Active"] = True
+                return
+
+        if (shared["player2Active"] == True):
+            shared["player2Active"] = False
+            shared["resolveNow"] = shared["resolveNow"] + 1
+            if (shared["resolveNow"] < 2):
+                shared["player1Active"] = True
+                return
+                

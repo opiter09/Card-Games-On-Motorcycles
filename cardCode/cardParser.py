@@ -9,7 +9,7 @@ shared = sharedVariables.myGlobals()
 def maintenanceTriggers(playerIndex):
     global shared
 
-    for i in [1, 2]:
-        for j in [1, 2, 3, 4, 5]:
+    #for i in [1, 2]:
+        #for j in [1, 2, 3, 4, 5]:
             
         

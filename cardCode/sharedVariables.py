@@ -72,3 +72,7 @@ player2Stone = player2Plant = player2Metal = player2Animal = player2Cosmic = 0
 
 player1CurrentStone = player1CurrentPlant = player1CurrentMetal = player1CurrentAnimal = player1CurrentCosmic = 0
 player2CurrentStone = player2CurrentPlant = player2CurrentMetal = player2CurrentAnimal = player2CurrentCosmic = 0
+
+player1Acting = False
+player2Acting = False
+resolveNow = 0

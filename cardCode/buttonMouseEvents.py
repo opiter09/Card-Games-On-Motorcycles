@@ -8,6 +8,7 @@ buttons = cardButtons.myGlobals()
 import cardCode.sharedVariables as sharedVariables
 shared = sharedVariables.myGlobals()
 
+import cardCode.cardParser as cardParser
 
 def test(param):
     print(param)
@@ -52,13 +53,15 @@ def influenceClick(player, classification):
             shared["player1Current" + classification] = shared["player1Current" + classification] + 1
         cardText.myGlobals()["pickOne"].visible = False
         shared["player1Phase"] = "Maintenance"
+        cardParser.maintenanceTriggers(1)
     elif (player == 2) and (cardText.myGlobals()["pickTwo"].visible == True):
         if (shared["player2Stone"] + shared["player2Plant"] + shared["player2Metal"] + shared["player2Animal"] + shared["player2Cosmic"] < 9):
             shared["player2" + classification] = shared["player2" + classification] + 1
             shared["player2Current" + classification] = shared["player2Current" + classification] + 1
         cardText.myGlobals()["pickTwo"].visible = False
         shared["player2Phase"] = "Maintenance"
-    
+        cardParser.maintenanceTriggers(2)
+
 buttons["p1hand1Button"].on_double_click = Func(lambda: handClick(1, 1))
 buttons["p1hand2Button"].on_double_click = Func(lambda: handClick(1, 2))
 buttons["p1hand3Button"].on_double_click = Func(lambda: handClick(1, 3))

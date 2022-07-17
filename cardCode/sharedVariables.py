@@ -76,3 +76,5 @@ player2CurrentStone = player2CurrentPlant = player2CurrentMetal = player2Current
 player1Acting = False
 player2Acting = False
 resolveNow = 0
+
+theStack = []

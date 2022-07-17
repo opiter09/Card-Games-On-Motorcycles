@@ -63,6 +63,17 @@ put it directly into your territory, then shuffle your address book." ]
         "vitality": 4,
         "effects": [ "Contract and 1C: If you have an unoccupied Auxiliary Zone, terminate target Comrade and create a Pod token, a Cosmic Aether with \
 'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
+of target Comrade in your territory named Killer Clown.' Activate this effect only during your turn." ]
+    },
+    
+    "Killer Clown Token": {
+        "cost": "3CC",
+        "type": "Comrade",
+        "subType": "Clown",
+        "strength": 4,
+        "vitality": 4,
+        "effects": [ "Contract and 1C: If you have an unoccupied Auxiliary Zone, terminate target Comrade and create a Pod token, a Cosmic Aether with \
+'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
 of target Comrade you control named Killer Clown.' Activate this effect only during your turn, before the Combat Phase." ]
     },
     

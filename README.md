@@ -7,7 +7,8 @@ This game is made using Ursina (https://github.com/pokepetter/ursina), a framewo
 sources can be found in the credits file.
 
 Also, I decided to include SHARECART1000 support, because why not. The website for SHARECART1000 is https://sharecart1000.com, and the idea is basically that a bunch of
-games all do different things with the same values in the same save file. It's pretty nifty!
+games all do different things with the same values in the same save file. It's pretty nifty! This game generates decks for both players using the contents of the save
+file, although since 255 cards do not exist yet trying that out will currently just get you a List Index error.
 
 This repo is extremely WIP, and honestly it currently exists just to back the code up more so than to garner any feedback or the like. When the game is in a playable 
 state, I plan on releasing it on itch.io (for free, to be clear).

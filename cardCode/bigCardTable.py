@@ -5,15 +5,16 @@ bigTable = {
         "subType": "Boulder",
         "strength": 0,
         "vitality": 3,
-        "effects": [ "Oiled Stone cannot attack.", "Oiled Stone gets +10 Strength while it has Blaze Counters on it.", "Whenever a card with blaze \
-counters on it damages Oiled Stone, put a Blaze Counter on Oiled Stone." ]
+        "effects": [ "Oiled Stone cannot attack.", "Oiled Stone gets +10 Strength while it has Blaze Counters on it.", "Whenever a card with Blaze \
+Counters on it damages Oiled Stone, put a Blaze Counter on Oiled Stone." ]
     },
     
     "Forest Fire": {
         "cost": "2PP",
         "type": "Aether",
-        "effects": [ "When there are no Comrades in either territory, terminate Forest Fire.", "When Forest Fire enters your territory or \
-whenever a Comrade is terminated, put a Blaze Counter on Forest Fire, then deal damage to target Comrade equal to the number of Blaze Counters on Forest Fire." ]
+        "effects": [ "When there are no Comrades in both territories, terminate Forest Fire.", "When Forest Fire enters your territory, \
+put a Blaze Counter on Forest Fire, then it deals damage to target Comrade equal to the number of Blaze Counters on it.", "Whenever a Comrade \
+is terminated, perform the previous effect." ]
     },
     
     "Trebuchet": {
@@ -26,13 +27,14 @@ Blaze Counters on it, Trebuchet also deals damage equal to its Strength to the t
     "Desperate Summons": {
         "cost": "2A",
         "type": "Chant",
-        "effects": [ "Do the following twice: draw a card, then either play it immediately if you are fully able (ignoring timing), or discard it if you are not." ]
+        "effects": [ "Draw two cards, then either play them both immediately in the order they were drawn if you are fully able to (ignoring timing), \
+or discard them if you are not." ]
     },
 
     "Foolish Charge": {
         "cost": "1A",
         "type": "Chant",
-        "effects": [ "Play this card only during your opponent's Maintenance Phase.", "During this turn's Combat Phase, all of your opponent's \
+        "effects": [ "Play this card only during your opponent's turn.", "During this turn's Combat Phase, all of your opponent's \
 Comrades get +2 Strength and must attack if able. At the beginning of this turn's End Phase, terminate all Comrades that attacked this turn." ]
     },
     

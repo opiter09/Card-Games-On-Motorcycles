@@ -36,7 +36,11 @@ def makeTooltipText(i, j, entry, theString, change):
             text = text + key + ": " + str(shared["player" + str(i) + theString][str(j - 1)]["Counters"][key]) + "\n"
     else:
         globals()["breaksNumber"] = 0
-    globals()["breaksNumber"] = globals()["breaksNumber"] + (max(0, len(entry["effects"]) - 1) / 2.5)
+    
+    if (len(entry["effects"]) < 3):
+        globals()["breaksNumber"] = globals()["breaksNumber"] + (max(0, len(entry["effects"]) - 1) / 2.5)
+    else:
+        globals()["breaksNumber"] = globals()["breaksNumber"] + ((len(entry["effects"]) + 1) / 2.3)
 
     text = text + entry["type"]
     if (entry["type"] == "Comrade"):

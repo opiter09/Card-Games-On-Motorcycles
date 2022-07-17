@@ -1,9 +1,11 @@
 import json
 import random
+import os.path
+import cardCode.shareCart as shareCart
 
 def myGlobals():
     return globals()
-
+                    
 player1Phase = ""
 player2Phase = ""
 firstPlayer = round(random.randint(500, 1000) / 500)
@@ -16,18 +18,24 @@ else:
 turnCount = 0
 
 f = open("player1Deck.json")
-p1Deck = json.load(f)
+player1DeckFile = json.load(f)
 f.close()
-player1OriginalDeck = list(p1Deck.values())
+player1OriginalDeck = list(player1DeckFile.values())
+if (os.path.exists("../o_o.ini") == True):
+    player1OriginalDeck = shareCartDeck("normal")
+
 player1Deck = player1OriginalDeck
 random.shuffle(player1Deck)
 player1Hand = player1Deck[0:4]
 player1Deck = player1Deck[4:40]
 
 f = open("player2Deck.json")
-p2Deck = json.load(f)
+player2DeckFile = json.load(f)
 f.close()
-player2OriginalDeck = list(p2Deck.values())
+player2OriginalDeck = list(player2DeckFile.values())
+if (os.path.exists("../o_o.ini") == True):
+    player2Deck = shareCartDeck("reverse")
+
 player2Deck = player2OriginalDeck
 random.shuffle(player2Deck)
 player2Hand = player2Deck[0:4]

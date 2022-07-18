@@ -10,9 +10,7 @@ def shareCartDeck(direction):
     config.read("../o_o.ini")
 
     global bigTable
-    cardNames = []
-    for k in list(bigTable.cardNames()):
-        cardNames.insert(10000, bigTable[k]["Name"])
+    cardNames = list(bigTable.keys())
     theList = []
     
     if (direction == "normal"):

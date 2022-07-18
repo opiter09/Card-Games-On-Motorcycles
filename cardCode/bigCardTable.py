@@ -20,8 +20,8 @@ is terminated, perform the previous effect." ]
     "Trebuchet": {
         "cost": "4M",
         "type": "Aether",
-        "effects": [ "Terminate a Stone Comrade in your territory: Trebuchet deals damage equal to its Vitality to target Comrade. If the terminated Comrade had \
-Blaze Counters on it, Trebuchet also deals damage equal to its Strength to the target Comrade's controller." ]
+        "effects": [ "Terminate a Stone Comrade in your territory: Trebuchet deals damage equal to its Vitality to target Comrade. If the terminated \
+Comrade had Blaze Counters on it, Trebuchet also deals damage equal to its Strength to the target Comrade's controller." ]
     },
 
     "Desperate Summons": {
@@ -44,8 +44,8 @@ Comrades get +2 Strength and must attack if able. At the beginning of this turn'
         "subType": "Laborer",
         "strength": 1,
         "vitality": 5,
-        "effects": [ "Terminate Wheel Runner and 1MM: If you have an unoccupied Auxiliary Zone, search your address book for a card named \"Trebuchet\", \
-put it directly into your territory, then shuffle your address book." ]
+        "effects": [ "Terminate Wheel Runner and 1MM: If you have an unoccupied Auxiliary Zone, search your address book for a card named \
+\"Trebuchet\", put it directly into your territory, then shuffle your address book." ]
     },
 
     "Alien Observer": {
@@ -63,8 +63,8 @@ put it directly into your territory, then shuffle your address book." ]
         "subType": "Clown",
         "strength": 4,
         "vitality": 4,
-        "effects": [ "Contract and 1C: If you have an unoccupied Auxiliary Zone, terminate target Comrade and create a Pod token, a Cosmic Aether with \
-'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
+        "effects": [ "Contract and 1C: If you have an unoccupied Auxiliary Zone, terminate target Comrade and create a Pod token, a Cosmic Aether \
+with 'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
 of target Comrade in your territory named Killer Clown.' Activate this effect only during your turn." ]
     },
     
@@ -74,16 +74,16 @@ of target Comrade in your territory named Killer Clown.' Activate this effect on
         "subType": "Clown",
         "strength": 4,
         "vitality": 4,
-        "effects": [ "Contract and 1C: If you have an unoccupied Auxiliary Zone, terminate target Comrade and create a Pod token, a Cosmic Aether with \
-'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
-of target Comrade you control named Killer Clown.' Activate this effect only during your turn, before the Combat Phase." ]
+        "effects": [ "Contract and 1C: If you have an unoccupied Auxiliary Zone, terminate target Comrade and create a Pod token, a Cosmic Aether \
+with 'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
+of target Comrade in your territory named Killer Clown.' Activate this effect only during your turn." ]
     },
     
     "Pod Token": {
         "cost": "C",
         "type": "Aether",
-        "effects": [ "At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy of target Comrade \
-you control named Killer Clown." ]
+        "effects": [ "At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy of target \
+Comrade you control named Killer Clown." ]
     }
 }
      

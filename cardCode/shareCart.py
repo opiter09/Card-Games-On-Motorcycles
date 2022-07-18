@@ -21,12 +21,12 @@ def shareCartDeck(direction):
                 j = 0
                 while (partOne.endswith(tokenText) == True):
                     j = j + 1
-                    partOne = cardNames[bytE[0] + j]
+                    partOne = cardNames[bytE[0] - j]
                 partTwo = cardNames[bytE[1]]
                 j = 0
                 while (partTwo.endswith(tokenText) == True):
                     j = j + 1
-                    partTwo = cardNames[bytE[1] + j]                
+                    partTwo = cardNames[bytE[1] - j]                
                 theList.insert(10000, partOne)
                 theList.insert(10000, partOne)
                 theList.insert(10000, partTwo)
@@ -44,7 +44,7 @@ def shareCartDeck(direction):
                     j = 0
                     while (name.endswith(tokenText) == True):
                         j = j + 1
-                        name = cardNames[int.from_bytes(theString[i].encode("utf-8"), "big") + j]
+                        name = cardNames[int.from_bytes(theString[i].encode("utf-8"), "big") - j]
                     theList.insert(10000, name)
                     theList.insert(10000, name)
             elif (item.lower() == "switch0"):
@@ -59,7 +59,7 @@ def shareCartDeck(direction):
                 j = 0
                 while (name.endswith(tokenText) == True):
                     j = j + 1
-                    name = cardNames[oneByte + j]
+                    name = cardNames[oneByte - j]
                 theList.insert(10000, name)
                 theList.insert(10000, name)
     elif (direction == "reverse"):
@@ -70,12 +70,12 @@ def shareCartDeck(direction):
                 j = 0
                 while (partOne.endswith(tokenText) == True):
                     j = j + 1
-                    partOne = cardNames[(bytE[0] ^ ((2 ** 8) - 1)) + j]
+                    partOne = cardNames[(bytE[0] ^ ((2 ** 8) - 1)) - j]
                 partTwo = cardNames[bytE[1] ^ ((2 ** 8) - 1)]
                 j = 0
                 while (partTwo.endswith(tokenText) == True):
                     j = j + 1
-                    partTwo = cardNames[(bytE[1] ^ ((2 ** 8) - 1)) + j]   
+                    partTwo = cardNames[(bytE[1] ^ ((2 ** 8) - 1)) - j]   
                 theList.insert(10000, partOne)
                 theList.insert(10000, partOne)
                 theList.insert(10000, partTwo)
@@ -93,7 +93,7 @@ def shareCartDeck(direction):
                     j = 0
                     while (name.endswith(tokenText) == True):
                         j = j + 1
-                        name = cardNames[(int.from_bytes(theString[i].encode("utf-8"), "big") ^ ((2 ** 8) - 1)) + j]
+                        name = cardNames[(int.from_bytes(theString[i].encode("utf-8"), "big") ^ ((2 ** 8) - 1)) - j]
                     theList.insert(10000, name)
                     theList.insert(10000, name)
             elif (item.lower() == "switch0"):
@@ -108,7 +108,7 @@ def shareCartDeck(direction):
                 j = 0
                 while (name.endswith(tokenText) == True):
                     j = j + 1
-                    name = cardNames[oneByte + j]
+                    name = cardNames[oneByte - j]
                 theList.insert(10000, name)
                 theList.insert(10000, name)
     return theList

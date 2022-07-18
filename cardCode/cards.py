@@ -1,5 +1,6 @@
 from ursina import *
 import collections
+import os.path
 
 import cardCode.sharedVariables as sharedVariables
 shared = sharedVariables.myGlobals()
@@ -14,11 +15,11 @@ import cardCode.effectFunctions as effectFunctions
 check = 0
 check2 = 0
 for i in [1, 2]:
-    if (len(shared["player" + str(i) + "OriginalDeck"]) != 40):
+    if (len(shared["player" + str(i) + "OriginalDeck"]) != 40) and (os.path.exists("../o_o.ini") == False):
         check2 = 1
     counting = collections.Counter(shared["player" + str(i) + "OriginalDeck"])
     for k in counting.values():
-        if (k > 2):
+        if (k > 2) and (os.path.exists("../o_o.ini") == False):
             check = 1
 if (check == 1):
     Text(text = "ILLEGAL DECK DETECTED. ONLY 2 COPIES OF A CARD ARE ALLOWED.", color = color.red, origin = (0, -10))

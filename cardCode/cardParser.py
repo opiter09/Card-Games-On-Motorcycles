@@ -19,12 +19,12 @@ def maintenanceTriggers(playerIndex):
                 effectsList = []
                 for k in range(len(entry["effects"])):
                     if (entry["effects"][k].startswith(eitherMaintenanceString) == True):
-                        effectsList.insert(10000, k)
+                        theTable = { "section": "Comrades", "position": j, "player": i, "effect": k }
+                        shared["theStack"].insert(10000, theTable)
                     elif (entry["effects"][k].startswith(maintenanceString) == True):
                         if (shared["player" + str(playerIndex) + "Phase"] == "Maintenance"):
-                            effectsList.insert(10000, k)
-                theTable = { "section": "Comrades", "position": j, "player": i, "effects": effectsList }
-                shared["theStack"].insert(10000, theTable)
+                            theTable = { "section": "Comrades", "position": j, "player": i, "effect": k }
+                            shared["theStack"].insert(10000, theTable)
                     
         for j in [1, 2, 3]:
             if (len(shared["player" + str(i) + "Auxiliaries"][str(j)]) > 0):
@@ -32,24 +32,24 @@ def maintenanceTriggers(playerIndex):
                 effectsList = []
                 for k in range(len(entry["effects"])):
                     if (entry["effects"][k].startswith(eitherMaintenanceString) == True):
-                        effectsList.insert(10000, k)
+                        theTable = { "section": "Auxiliaries", "position": j, "player": i, "effect": k }
+                        shared["theStack"].insert(10000, theTable)
                     elif (entry["effects"][k].startswith(maintenanceString) == True):
                         if (shared["player" + str(playerIndex) + "Phase"] == "Maintenance"):
-                            effectsList.insert(10000, k)
-                theTable = { "section": "Auxiliaries", "position": j, "player": i, "effects": effectsList }
-                shared["theStack"].insert(10000, theTable)
+                            theTable = { "section": "Auxiliaries", "position": j, "player": i, "effect": k }
+                            shared["theStack"].insert(10000, theTable)
                     
         if (len(shared["player" + str(i) + "Discard"]) > 0):
             entry = bigTable[shared["player" + str(i) + "Discard"][0]]
             effectsList = []
             for k in range(len(entry["effects"])):
                 if (entry["effects"][k].startswith(eitherMaintenanceString) == True):
-                    effectsList.insert(10000, k)
+                    theTable = { "section": "Discard", "position": j, "player": i, "effect": k }
+                    shared["theStack"].insert(10000, theTable)
                 elif (entry["effects"][k].startswith(maintenanceString) == True):
                     if (shared["player" + str(playerIndex) + "Phase"] == "Maintenance"):
-                        effectsList.insert(10000, k)
-            theTable = { "section": "Discard", "position": 0, "player": i, "effects": effectsList }
-            shared["theStack"].insert(10000, theTable)
+                        theTable = { "section": "Discard", "position": j, "player": i, "effect": k }
+                        shared["theStack"].insert(10000, theTable)
                             
                         
         

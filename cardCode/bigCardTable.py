@@ -9,7 +9,7 @@ bigTable = {
 Counters on it damages Oiled Stone, put a Blaze Counter on Oiled Stone." ]
     },
     
-    "Stonewalling": {
+    "Stonewalled": {
         "cost": "S",
         "type": "Chant",
         "effects": [ "The next time the stack is empty, end the Combat Phase and immediately proceed to Main Phase 2." ]
@@ -24,7 +24,7 @@ is terminated, perform the previous effect." ]
     },
     
     "Nature's Rebirth": {
-        "cost": "6PPP",
+        "cost": "7PP",
         "type": "Ritual",
         "effects": [ "Play this card only if all of your Comrade and Auxiliary Zones are unoccupied and there are no other cards in your hand.",
 "Shuffle all Chant and Ritual cards in your graveyard into your address book. Then, as many times as possible, put the top card of your graveyard \

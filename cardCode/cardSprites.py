@@ -81,7 +81,7 @@ base.camera3.node().getLens().setNearFar(1.9, 2.1)
 base.camera3.node().getLens().setAspectRatio(16.0/5.0)
 
 def camelCase(spaced):
-    split = spaced.split()
+    split = spaced.replace("'", "").split()
     beginning = split[0][0].lower() + split[0][1:1000]
     final = "0"
     for i in split:

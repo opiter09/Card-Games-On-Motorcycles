@@ -93,6 +93,8 @@ def camelCase(spaced):
 
 def updateSprites():    
     shared = sharedVariables.myGlobals()
+    colorTable = [ color.violet, color.blue, color.green, color.yellow, color.orange, color.red ]
+
     for i in [1, 2]:
         for j in [1, 2, 3, 4, 5, 6]:
             if (len(shared["player" + str(i) + "Hand"]) >= j):

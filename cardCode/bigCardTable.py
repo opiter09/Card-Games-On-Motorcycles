@@ -9,6 +9,12 @@ bigTable = {
 Counters on it damages Oiled Stone, put a Blaze Counter on Oiled Stone." ]
     },
     
+    "Stonewalling": {
+        "cost": "S",
+        "type": "Chant",
+        "effects": [ "The next time the stack is empty, end the Combat Phase and immediately proceed to Main Phase 2." ]
+    },
+    
     "Forest Fire": {
         "cost": "2PP",
         "type": "Aether",
@@ -67,6 +73,12 @@ Comrades get +2 Strength and must attack if able. At the beginning of this turn'
 with 'At the beginning of your Maintence Phase, terminate this. If you have an unoccupied Comrade Zone, create a token copy \
 of target Comrade in your territory named Killer Clown.' Activate this effect only during your turn." ]
     },
+    
+    "The Quintet Crusher": {
+        "cost": "SPMAC",
+        "type": "Ritual",
+        "effects": [ "Play this card only if there is a Stone Comrade, a Plant Comrade, a Metal Comrade, an Animal Comrade, and a Cosmic Comrade in \
+your territory.", "Your opponent terminates all cards in their territory, and discards all cards in their hand." ]
     
     "Killer Clown Token": {
         "cost": "3CC",

@@ -23,6 +23,14 @@ put a Blaze Counter on Forest Fire, then it deals damage to target Comrade equal
 is terminated, perform the previous effect." ]
     },
     
+    "Nature's Rebirth": {
+        "cost": "6PPP",
+        "type": "Ritual",
+        "effects": [ "Play this card only if all of your Comrade and Auxiliary Zones are unoccupied and there are no other cards in your hand.",
+"Shuffle all Chant and Ritual cards in your graveyard into your address book. Then, as many times as possible, put the top card of your graveyard \
+directly into your territory. Then shuffle the remainder of your graveyard into your address book." ]
+    },
+    
     "Trebuchet": {
         "cost": "4M",
         "type": "Aether",

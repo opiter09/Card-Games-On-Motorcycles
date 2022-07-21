@@ -100,6 +100,18 @@ def updateSprites():
             if (len(shared["player" + str(i) + "Hand"]) >= j):
                 globals()["p" + str(i) + "hand" + str(j)].texture = "sprites/cardArt/" + camelCase(shared["player" + str(i) + "Hand"][j - 1])
                 globals()["p" + str(i) + "hand" + str(j)].enabled = True
+
+                check = 0
+                for k in range(len(shared["theStack"])):
+                    if (shared["theStack"][k]["section"] == "Hand") and (shared["theStack"][k]["position"] == j) and (shared["theStack"][k]["player"] == i):
+                        check = 1
+                        if (k < 6):
+                           globals()["p" + str(i) + "hand" + str(j)].color = colorTable[k]
+                        else:
+                            globals()["p" + str(i) + "hand" + str(j)].color = color.gold
+                if (check == 0):
+                    globals()["p" + str(i) + "hand" + str(j)].color = color.white
+
             else:
                 globals()["p" + str(i) + "hand" + str(j)].enabled = False
 
@@ -107,8 +119,21 @@ def updateSprites():
             if (len(shared["player" + str(i) + "Comrades"][str(j - 1)]) > 0):
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(shared["player" + str(i) + "Comrades"][str(j - 1)]["Name"])
                 globals()["p" + str(i) + "comrade" + str(j) + "Card"].enabled = True
+
                 if (shared["player" + str(i) + "Comrades"][str(j - 1)]["Contracted"] == "True"):
                     globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_z = 180
+                
+                check = 0
+                for k in range(len(shared["theStack"])):
+                    if (shared["theStack"][k]["section"] == "Comrades") and (shared["theStack"][k]["position"] == j) and (shared["theStack"][k]["player"] == i):
+                        check = 1
+                        if (k < 6):
+                           globals()["p" + str(i) + "comrade" + str(j) + "Card"].color = colorTable[k]
+                        else:
+                            globals()["p" + str(i) + "comrade" + str(j) + "Card"].color = color.gold
+                if (check == 0):
+                    globals()["p" + str(i) + "comrade" + str(j) + "Card"].color = color.white
+
                 else:
                     globals()["p" + str(i) + "comrade" + str(j) + "Card"].rotation_z = 0
             else:
@@ -118,8 +143,21 @@ def updateSprites():
             if (len(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]) > 0):
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].texture = "sprites/cardArt/" + camelCase(shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Name"])
                 globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].enabled = True
+
                 if (shared["player" + str(i) + "Auxiliaries"][str(j - 1)]["Contracted"] == "True"):
                     globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].rotation_z = 180
+
+                check = 0
+                for k in range(len(shared["theStack"])):
+                    if (shared["theStack"][k]["section"] == "Auxiliaries") and (shared["theStack"][k]["position"] == j) and (shared["theStack"][k]["player"] == i):
+                        check = 1
+                        if (k < 6):
+                           globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].color = colorTable[k]
+                        else:
+                            globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].color = color.gold
+                if (check == 0):
+                    globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].color = color.white
+
                 else:
                     globals()["p" + str(i) + "auxiliary" + str(j) + "Card"].rotation_z = 0
             else:
@@ -128,6 +166,18 @@ def updateSprites():
         if (len(shared["player" + str(i) + "Discard"]) > 0):
             globals()["p" + str(i) + "discardCard"].texture = "sprites/cardArt/" + camelCase(shared["player" + str(i) + "Discard"][0])
             globals()["p" + str(i) + "discardCard"].enabled = True
+
+            check = 0
+            for k in range(len(shared["theStack"])):
+                if (shared["theStack"][k]["section"] == "Discard") and (shared["theStack"][k]["position"] == 0) and (shared["theStack"][k]["player"] == i):
+                    check = 1
+                    if (k < 6):
+                       globals()["p" + str(i) + "discardCard"].color = colorTable[k]
+                    else:
+                        globals()["p" + str(i) + "discardCard"].color = color.gold
+            if (check == 0):
+                globals()["p" + str(i) + "discardCard"].color = color.white
+
         else:
             globals()["p" + str(i) + "discardCard"].enabled = False
             

@@ -87,6 +87,7 @@ of target Comrade in your territory named Killer Clown.' Activate this effect on
         "type": "Ritual",
         "effects": [ "Play this card only if there is a Stone Comrade, a Plant Comrade, a Metal Comrade, an Animal Comrade, and a Cosmic Comrade in \
 your territory.", "Your opponent terminates all cards in their territory, and discards all cards in their hand." ]
+    },
     
     "Killer Clown Token": {
         "cost": "3CC",

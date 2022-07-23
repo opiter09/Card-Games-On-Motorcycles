@@ -11,6 +11,7 @@ import cardCode.cardButtons as cardButtons
 import cardCode.buttonTooltips as buttonTooltips
 import cardCode.buttonMouseEvents as buttonMouseEvents
 import cardCode.effectFunctions as effectFunctions
+import cardCode.effectResolution as effectResolution
 
 check = 0
 check2 = 0
@@ -90,7 +91,8 @@ def cardsUpdate():
                 
         if (shared["player" + str(i) + "Phase"] == "Maintenance") or (shared["player" + str(i) + "Phase"] == "Main2"):
             doOnce = 0
-                
+
+    effectResolution.emptyTheStack()
     cardText.updateText()
     cardSprites.updateSprites()
     cardButtons.updateButtons()

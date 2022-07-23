@@ -3,6 +3,7 @@ from ursina import *
 import cardCode.sahredVariables as sharedVariables
 shared = sharedVariables.myGlobals()
 
+import cardCode.cardParser as cardParser
 from cardCode.bigCardTable import bigTable
 
 def emptyTheStack():
@@ -13,5 +14,7 @@ def emptyTheStack():
         shared["resolveNow"] = 0
         return
         
-    for i in range(len(shared["theStack"])):
-        pass
+    if (len(shared["theStack"][-1]["target"]) == 0):
+        if (len(shared["currentTargetConditions"]) == 0):
+            shared["currentTargetConditions"] = cardParser.targetConditions(shared["theStack"][-1])
+        return
